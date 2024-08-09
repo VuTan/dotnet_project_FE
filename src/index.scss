@@ -1,0 +1,43 @@
+/*sửa font, sửa kích thước thẻ*/
+$font: "Arial";
+
+$backgroud_color : #b99494;
+$text_color: #262626;
+//$hoverButton_color: ...;
+//.........
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $font;
+
+  p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 32.67px;
+  }
+
+  h1 {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 32.67px;
+  }
+
+  h2 {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 32.67px;
+  }
+
+  h3 {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 32.67px;
+  }
+
+  h4 {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 32.67px;
+  }
+}
