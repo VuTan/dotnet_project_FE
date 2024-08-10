@@ -1,0 +1,34 @@
+@charset "UTF-8";
+.navbar-wrapper {
+  background: linear-gradient(to right, #eff9fd, #cfe8f3, #679bb6);
+  height: 50px;
+  display: flex;
+}
+.navbar-wrapper .logo {
+  max-width: -200%;
+  margin-left: 10%;
+  padding-right: 2%;
+}
+.navbar-wrapper .logo img {
+  height: 100px;
+  margin-top: -8%;
+}
+.navbar-wrapper .menu-wrapper {
+  display: flex;
+  justify-content: space-between; /* Phân phối không gian giữa các liên kết */
+  align-items: center;
+  flex-grow: 1; /* Để menu-wrapper chiếm toàn bộ không gian còn lại */
+  margin-right: 25%;
+}
+.navbar-wrapper .menu-wrapper a {
+  text-decoration: none; /* Loại bỏ gạch chân */
+  color: black; /* Màu chữ mặc định */
+  font-size: 16px;
+  transition: color 0.3s ease; /* Hiệu ứng chuyển màu khi hover */
+  font-weight: bold;
+}
+.navbar-wrapper .menu-wrapper a:hover {
+  color: orange; /* Màu chữ khi hover */
+}
+
+/*# sourceMappingURL=navbar.css.map */

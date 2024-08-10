@@ -1,0 +1,27 @@
+.middle {
+  padding: 3px 0;
+  font-size: 14px;
+  background-color: rgba(223, 224, 225, 0.25);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px; /* Chiều cao của thanh */
+}
+
+.information {
+  display: flex;
+  gap: 100px;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  font-size: 12px; /* Giảm kích thước chữ */
+  margin-left: 5px; /* Khoảng cách giữa biểu tượng và văn bản */
+}
