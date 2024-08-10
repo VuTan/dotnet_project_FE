@@ -7,11 +7,11 @@
 .navbar-wrapper .logo {
   max-width: -200%;
   margin-left: 10%;
-  padding-right: 2%;
+  padding-right: 4%;
 }
 .navbar-wrapper .logo img {
   height: 100px;
-  margin-top: -8%;
+  margin-top: -12%;
 }
 .navbar-wrapper .menu-wrapper {
   display: flex;
