@@ -7,11 +7,6 @@ const MiddleHeader = () => {
     return (
         <div className={"middle"}>
             <div className={"container"}>
-                {/*<div className={"logo"}>*/}
-                {/*    <Link to="/">*/}
-                {/*        /!*<img src={images.logo} alt="Shop hàng Nguyễn Duy Thanh"/>*!/*/}
-                {/*    </Link>*/}
-                {/*</div>*/}
                 <div className={"information"}>
                     <div className="box">
                         <AiFillEnvironment size={20} color="orange" /><p className={"title"}>117 Cửa hàng khắp cả nước</p>

@@ -1,0 +1,107 @@
+@charset "UTF-8";
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #fff;
+  padding: 40px;
+  min-width: 600px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 40%;
+}
+
+.heading {
+  flex-direction: column;
+  gap: 4px;
+}
+.heading h2 {
+  margin: 0;
+  font-size: x-large;
+  font-weight: bold;
+  color: orange;
+}
+.heading .error {
+  margin: 0;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+label {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+input {
+  padding: 8px;
+  border: 1px solid orange;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.error {
+  color: red;
+  font-size: 16px;
+}
+
+.success {
+  color: green;
+  font-size: 12px;
+}
+
+.submitButton {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  background-color: orange;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.submitButton:hover {
+  background-color: #c06518;
+}
+
+.link {
+  color: #0056b3;
+  text-decoration: none;
+}
+
+input,
+select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+input::placeholder,
+select option[value=""] {
+  color: #aaa; /* Màu sắc của placeholder */
+}
+
+input::placeholder {
+  color: #aaa; /* Màu chữ của placeholder trong các trường input */
+}
+
+select {
+  color: #706f6f; /* Màu chữ trong select khi không có lựa chọn */
+  border: 1px solid orange;
+}
+
+select option {
+  color: #262626; /* Màu chữ của các option trong select */
+  border: 1px solid orange;
+}
+
+input {
+  color: #706f6f;
+  border: 1px solid orange;
+}
+
+/*# sourceMappingURL=style.css.map */

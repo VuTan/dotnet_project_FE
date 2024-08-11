@@ -3,7 +3,7 @@ import './navbar.scss';
 import images from '../../images/images';
 import {Link, useLocation, useNavigate} from 'react-router-dom';
 import config from "./config/config";
-import {FaChevronUp} from "react-icons/fa";
+import {FaChevronUp, FaUser} from "react-icons/fa";
 
 
 function NavBar() {
@@ -64,6 +64,12 @@ function NavBar() {
                         Cửa hàng
                     </Link>
 
+            </div>
+            <div className={"login"}>
+                <Link title="Đăng nhập" to={config.routes.login}
+                      onClick={() => handleClick(config.routes.login)}>
+                <FaUser size={20} color={"orange"} />
+                </Link>
             </div>
         </div>
     );
