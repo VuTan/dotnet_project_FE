@@ -3,7 +3,9 @@ const routes = {
     menu: '/menu',
     homeStory: '/homeStory',
     inspiration: '/inspiration',
-    store: '/store'
+    store: '/store',
+    login:'/login',
+    signup:'/signup'
 
 };
 
