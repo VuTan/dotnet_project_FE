@@ -1,0 +1,21 @@
+.content {
+  margin-top: 3%;
+}
+
+.left, .right {
+  height: 100%;
+}
+
+.images {
+  width: 100%;
+  height: auto;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.content > :first-child {
+  margin-bottom: 3%;
+}
