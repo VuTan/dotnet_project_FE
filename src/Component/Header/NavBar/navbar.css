@@ -1,6 +1,7 @@
 @charset "UTF-8";
 .navbar-wrapper {
   background: linear-gradient(to right, #eff9fd, #cfe8f3, #679bb6);
+  backdrop-filter: blur(10px);
   height: 50px;
   display: flex;
   align-items: center;

@@ -1,14 +1,19 @@
+import {SlideBanner} from "./SlideBanner";
+import Content from "./content/content";
 
-import './Home.scss';
 function Home() {
 
     return (
-
-      <div></div>
-
+        <div>
+            <div className="SlideBanner">
+                <SlideBanner/>
+            </div>
+            <div className="Content">
+                <Content/>
+            </div>
+        </div>
 
     );
-
 }
 
 export default Home;
