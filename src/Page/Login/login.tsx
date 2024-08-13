@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, { useState} from "react";
 import {AiOutlineUser} from "react-icons/ai";
 import {Link} from "react-router-dom";
 import "./login.scss";
@@ -9,13 +9,14 @@ import {RootState} from "../../redux/store";
 
 function Login() {
     const dispatch = useDispatch();
-    const [email, setEmail] = useState('');
+    const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
-    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-        dispatch(login({email: email, password: password}))
+    const handleSubmit = () => {
+        dispatch(login({username: username, password: password}))
     }
 
+    // gọi user
     const user = useSelector((state: RootState) => state.user);
 
     return (
@@ -35,7 +36,7 @@ function Login() {
                     type="text"
                     placeholder="Tên đăng nhập"
                     className={"input"}
-                    onChange={(event) => setEmail(event.target.value)}
+                    onChange={(event) => setUsername(event.target.value)}
                     required
                 />
                 <input

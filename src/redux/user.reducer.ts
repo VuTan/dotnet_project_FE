@@ -26,8 +26,16 @@ const userSlice = createSlice({
             state.user = null;
             Cookies.remove("user");
         },
+        register: (state, action: PayloadAction<User>) => {
+            state.user = action.payload;
+            const userJSON = JSON.stringify(action.payload);
+
+            const expiresAt = new Date();
+            expiresAt.setMinutes(expiresAt.getMinutes() + 10);
+            Cookies.set("user", userJSON, {expires: expiresAt, path: "/"});
+        },
     },
 });
 
-export const {login, logout} = userSlice.actions;
+export const {login, logout,register} = userSlice.actions;
 export default userSlice.reducer;
