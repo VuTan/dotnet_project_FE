@@ -1,0 +1,55 @@
+.slider {
+  position: relative;
+  width: 100%; /* Adjust as needed */
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  transition: opacity 0.5s ease;
+}
+
+.image {
+  width: 100%; /* Adjust as needed */
+  height: auto;
+}
+
+.dots {
+  position: absolute;
+  bottom: 20px; /* Đặt ở phía dưới hình ảnh */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.dot {
+  display: inline-block;
+  width: 20px;
+  height: 6px;
+  margin: 0 5px;
+  background-color: white;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: orange;
+}
+
+.navigation {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}

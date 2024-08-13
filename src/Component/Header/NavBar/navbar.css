@@ -1,0 +1,46 @@
+@charset "UTF-8";
+.navbar-wrapper {
+  background: linear-gradient(to right, #eff9fd, #cfe8f3, #679bb6);
+  backdrop-filter: blur(10px);
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Phân chia khoảng cách giữa logo, menu và login */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 0 10%; /* Thêm padding để tạo khoảng cách đều giữa các phần tử với lề */
+}
+
+.logo {
+  flex-shrink: 0;
+  padding-right: 4%;
+}
+.logo img {
+  height: 100px;
+}
+
+.menu-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1; /* Cho phép menu-wrapper mở rộng để chiếm toàn bộ không gian giữa logo và login */
+  margin: 0 20px; /* Tạo khoảng cách đều giữa menu và logo, login */
+}
+
+.menu-wrapper a {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+.menu-wrapper a:hover {
+  color: orange;
+}
+
+.login {
+  flex-shrink: 0; /* Ngăn login bị co lại */
+  margin-left: 5%;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=navbar.css.map */
