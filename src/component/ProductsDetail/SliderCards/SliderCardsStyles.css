@@ -1,0 +1,40 @@
+.slick-slider {
+  width: 95%;
+  position: relative;
+}
+.slick-slider .slick-list {
+  padding-top: 20px;
+  height: -moz-fit-content;
+  height: fit-content;
+  overflow: hidden;
+}
+.slick-slider .slick-track {
+  display: flex;
+  gap: 10px;
+}
+.slick-slider .slick-prev:before, .slick-slider .slick-next:before {
+  color: #E57905;
+}
+.slick-slider .slick-prev {
+  left: -40px;
+}
+.slick-slider .slick-next {
+  right: -40px;
+}
+.slick-slider .slick-dots {
+  bottom: -30px;
+}
+.slick-slider .slick-dots li button:before {
+  font-size: 10px;
+  color: #E57905;
+}
+.slick-slider .slick-dots li.slick-active button:before {
+  color: #E57905;
+}
+
+.slider-container {
+  flex-direction: row;
+  justify-content: center;
+  display: flex;
+  width: 98%;
+}/*# sourceMappingURL=SliderCardsStyles.css.map */
