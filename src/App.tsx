@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import DefaultLayout from "./DefaultLayout/DefaultLayout";
 import { publicRoutes } from "./routes";
