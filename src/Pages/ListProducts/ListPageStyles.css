@@ -16,7 +16,6 @@
 }
 .listP_container .listP_right {
   padding: 10px;
-  justify-content: center;
   flex-direction: column;
   display: flex;
   background-color: white;
@@ -26,15 +25,14 @@
   margin-left: 50px;
   min-height: 489px;
   padding-bottom: 20px;
-  height: -moz-fit-content;
   height: fit-content;
   width: 100%;
 }
 .listP_container .listP_right .pagination_pages {
   margin-right: 10px;
   align-self: flex-end;
-  height: -moz-fit-content;
   height: fit-content;
-  width: -moz-fit-content;
   width: fit-content;
-}/*# sourceMappingURL=ListPageStyles.css.map */
+}
+
+/*# sourceMappingURL=ListPageStyles.css.map */

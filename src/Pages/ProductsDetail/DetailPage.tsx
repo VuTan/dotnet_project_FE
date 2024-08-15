@@ -1,46 +1,47 @@
 import React from "react";
-
+import { useParams } from "react-router-dom";
 import './detailsPageStyle.scss';
-import {useParams} from "react-router-dom";
 import ProductsDetailsImgs from "../../component/ProductsDetail/productDetailsImgs/ProductsDetailsImgs";
 import ProductsDetailsInfo from "../../component/ProductsDetail/ProductDetailInfo/ProductsDetailsInfo";
 import SliderCards from "../../component/ProductsDetail/SliderCards/SliderCards";
 import ProductDiscription from "../../component/ProductsDetail/ProductDetailsDescription/ProductDiscription";
 
-function DetailPage() {
-    const { productId} = useParams();
-    console.log("Tại trang product detail Product ID:"+ productId);
+// Define a type for URL parameters
+interface RouteParams {
+    [key: string]: string | undefined;
+    productId?: string;
+}
+
+const DetailPage: React.FC = () => {
+    const { productId } = useParams<RouteParams>();
+    console.log("Tại trang product detail Product ID:" + productId);
+
     return (
         <div className="pdetails_main">
             <div className="pdetails_container">
-
                 <div className="card1_container">
-
                     <div className="rows">
                         <div className="pdetails_imgs">
-                            <ProductsDetailsImgs productId={productId} />
+                            {productId && <ProductsDetailsImgs productId={productId} />}
                         </div>
 
                         <div className="pdetails_info">
-                            <ProductsDetailsInfo productId={productId} />
+                            {productId && <ProductsDetailsInfo productId={productId} />}
                         </div>
                     </div>
-
                 </div>
 
                 <div className="card3_container">
-                    <ProductDiscription productId={productId}/>
+                    {productId && <ProductDiscription productId={productId} />}
                 </div>
 
                 <div className="card2_container">
-                    <h2 className="Label_sameTypes"> Có thể bạn sẽ thích </h2>
-                    <SliderCards/>
+                    <h2 className="Label_sameTypes">Có thể bạn sẽ thích</h2>
+                    <SliderCards />
                 </div>
-
             </div>
         </div>
     );
-
 }
 
 export default DetailPage;
