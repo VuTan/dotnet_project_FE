@@ -1,3 +1,45 @@
+@charset "UTF-8";
+/*sửa font, sửa kích thước thẻ*/
+:root {
+  --font: "Arial";
+  --background-color: #b99494;
+  --text-color: #262626;
+  --font-size: 16px;
+  --line-height: 32.67px;
+  --font-weight: 400;
+  --primary-color: linear-gradient(to right, #eff9fd, #cfe8f3, #679bb6);
+  --secondary-color: orange;
+}
 
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font);
+}
+body p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32.67px;
+}
+body h1 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32.67px;
+}
+body h2 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32.67px;
+}
+body h3 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32.67px;
+}
+body h4 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 32.67px;
+}
 
 /*# sourceMappingURL=index.css.map */
