@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import './ListPageStyles.scss';
-import { Pagination } from "@mui/material";
-import ProductsList from "../../component/ProductList/ProductsList/ProductsList";
+import {Pagination} from "@mui/material";
+import ProductsList from "../../Component/ProductList/ProductsList/ProductsList";
 import productsData from "../../data/productsData";
-import ProductPrices from "../../component/ProductList/SideBar/ProductsPrices/ProductPrices";
-import ProductsTypes from "../../component/ProductList/SideBar/ProductsTypes/ProductsTypes";
-import { useLocation } from "react-router-dom";
+import ProductPrices from "../../Component/ProductList/SideBar/ProductsPrices/ProductPrices";
+import ProductsTypes from "../../Component/ProductList/SideBar/ProductsTypes/ProductsTypes";
+import {useLocation} from "react-router-dom";
 
 const ListPage: React.FC = () => {
     const location = useLocation();
@@ -29,13 +29,15 @@ const ListPage: React.FC = () => {
         <div>
             <div className="listP_container">
                 <div className="listP_left">
-                    <ProductsTypes handleChange={(event) => handleChange(event as React.ChangeEvent<unknown>, currentPage)} />
-                    <ProductPrices handleChange={(event) => handleChange(event as React.ChangeEvent<unknown>, currentPage)}/>
+                    <ProductsTypes
+                        handleChange={(event) => handleChange(event as React.ChangeEvent<unknown>, currentPage)}/>
+                    <ProductPrices
+                        handleChange={(event) => handleChange(event as React.ChangeEvent<unknown>, currentPage)}/>
                 </div>
 
                 <div className="listP_right">
                     <div className="listProductsItem">
-                        <ProductsList productData={currentPosts} />
+                        <ProductsList productData={currentPosts}/>
                     </div>
 
                     <div className="pagination_pages">

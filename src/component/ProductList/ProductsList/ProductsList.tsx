@@ -1,6 +1,6 @@
 import React from 'react';
 import './ProductsList.scss';
-import ProductItem from "../ProductItem/ProductItem";
+import ProductItem from "../../../Component/ProductList/ProductItem/ProductItem";
 
 interface Product {
     id: string;
@@ -11,7 +11,7 @@ interface ProductsListProps {
     productData: Product[];
 }
 
-const ProductsList: React.FC<ProductsListProps> = ({ productData }) => {
+const ProductsList: React.FC<ProductsListProps> = ({productData}) => {
 
     // Group products by subcategories
     const groupedProducts: Record<string, Product[]> = productData.reduce((acc: Record<string, Product[]>, product: Product) => {
