@@ -11,8 +11,8 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  margin-top: 30%;
   border: 1px solid orange;
+
   .input {
     padding: 0.5rem;
     border: 1px solid orange;
@@ -31,7 +31,8 @@
     &:hover {
       background-color: #c06518;
     }
-    width: 100%;
+
+    width: 92%;
   }
 
   .button:disabled {
@@ -47,6 +48,7 @@
   .link {
     color: orange;
     text-decoration: none;
+
     &:hover {
       color: #c06518;
     }
@@ -57,9 +59,10 @@
   }
 
   .title {
-    margin:4px 0
+    margin: 4px 0
   }
-  .title2{
+
+  .title2 {
     color: orange;
     font-size: x-large;
     font-weight: bold;
