@@ -1,7 +1,6 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { PATH } from './utils/path';
-import MasterLayout from './layout/masterLayout';
 import ListPage from './Pages/ListProducts/ListPage';
 import DetailPage from './Pages/ProductsDetail/DetailPage';
 
@@ -24,13 +23,13 @@ const renderRouter = (): JSX.Element => {
     ];
 
     return (
-        <MasterLayout>
+
             <Routes>
                 {userRouters.map((item, key) => (
                     <Route key={key} path={item.path} element={item.component} />
                 ))}
             </Routes>
-        </MasterLayout>
+
     );
 };
 

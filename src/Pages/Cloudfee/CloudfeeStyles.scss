@@ -1,0 +1,96 @@
+.Cloudfee_container {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  .banner-top {
+    position: relative;
+    img {
+      width: 100%;
+      border: none;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  .cloudfee-bg {
+    background-image: url(https://file.hstatic.net/1000075078/file/new_cloudfee_bg_21e3b1f33f7b4d069109cb81acf56b28.jpg);
+    color: #fff;
+    .top-desc {
+      padding: 40px 16px;
+      max-width: 824px;
+      margin: 0 auto;
+      font-size: 18px;
+      line-height: 1.22;
+      font-weight: 500;
+    }
+    .text-center {
+      text-align: center;
+    }
+    .cloudfee-block {
+      margin-bottom: 8px;
+.container {
+  width: 1200px;
+  .justify-s {
+    justify-content: space-between;
+  }
+
+ .align-c {
+    align-items: center;
+  }
+   .flex-w {
+    flex-wrap: wrap;
+  }
+  .flex-box {
+    display: flex;
+  }
+  .row {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  .info-block {
+    flex: 0 0 49%;
+    width: 49%;
+    .subtitle {
+      color: #FEBF3E;
+      font-size: 24px;
+      font-family: 'Baron';
+      line-height: 1;
+    }
+    .main-title {
+      margin-bottom: 8px;
+      font-family: 'Glad';
+      color: #FEBF3E;
+      font-size: 80px;
+      line-height: 1.05;
+    }
+  }
+  .cloud-desc {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 16px;
+  }
+  .cloud-btn {
+    font-size: 16px;
+    line-height: 24px;
+    color: #FEBF3E;
+    font-weight: 700;
+  }
+  .align-c {
+    align-items: center;
+  }
+
+   .flex-box {
+    display: flex;
+  }
+  span {
+    margin-right: 14px;
+  }
+  .img-block {
+    flex: 0 0 49%;
+    width: 49%;
+    img {
+      width: 100%;
+    }
+  }
+}
+    }
+  }
+}
