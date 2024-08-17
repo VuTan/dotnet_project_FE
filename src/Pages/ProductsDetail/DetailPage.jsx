@@ -2,14 +2,14 @@ import React from "react";
 
 import './detailsPageStyle.scss';
 import {useParams} from "react-router-dom";
-import ProductsDetailsImgs from "../../component/ProductsDetail/productDetailsImgs/ProductsDetailsImgs";
-import ProductsDetailsInfo from "../../component/ProductsDetail/ProductDetailInfo/ProductsDetailsInfo";
-import SliderCards from "../../component/ProductsDetail/SliderCards/SliderCards";
-import ProductDiscription from "../../component/ProductsDetail/ProductDetailsDescription/ProductDiscription";
+import ProductsDetailsImgs from "../../Component/ProductsDetail/productDetailsImgs/ProductsDetailsImgs";
+import ProductsDetailsInfo from "../../Component/ProductsDetail/ProductDetailInfo/ProductsDetailsInfo";
+import SliderCards from "../../Component/ProductsDetail/SliderCards/SliderCards";
+import ProductDiscription from "../../Component/ProductsDetail/ProductDetailsDescription/ProductDiscription";
 
 function DetailPage() {
-    const { productId} = useParams();
-    console.log("Tại trang product detail Product ID:"+ productId);
+    const {productId} = useParams();
+    console.log("Tại trang product detail Product ID:" + productId);
     return (
         <div className="pdetails_main">
             <div className="pdetails_container">
@@ -18,11 +18,11 @@ function DetailPage() {
 
                     <div className="rows">
                         <div className="pdetails_imgs">
-                            <ProductsDetailsImgs productId={productId} />
+                            <ProductsDetailsImgs productId={productId}/>
                         </div>
 
                         <div className="pdetails_info">
-                            <ProductsDetailsInfo productId={productId} />
+                            <ProductsDetailsInfo productId={productId}/>
                         </div>
                     </div>
 

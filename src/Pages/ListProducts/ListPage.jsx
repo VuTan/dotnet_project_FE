@@ -1,11 +1,11 @@
 import React, {useEffect, useState} from "react";
 import './ListPageStyles.scss'
 import {Button, Pagination} from "@mui/material";
-import ProductsList from "../../component/ProductList/ProductsList/ProductsList";
+import ProductsList from "../../Component/ProductList/ProductsList/ProductsList";
 import productsData from "../../data/productsData";
-import ProductPrices from "../../component/ProductList/SideBar/ProductsPrices/ProductPrices";
-import ProductsTypes from "../../component/ProductList/SideBar/ProductsTypes/ProductsTypes";
-import { useLocation } from "react-router-dom";
+import ProductPrices from "../../Component/ProductList/SideBar/ProductsPrices/ProductPrices";
+import ProductsTypes from "../../Component/ProductList/SideBar/ProductsTypes/ProductsTypes";
+import {useLocation} from "react-router-dom";
 
 function ListPage() {
     const location = useLocation();
@@ -26,31 +26,31 @@ function ListPage() {
     const currentPosts = itemsList.slice(firstIndex, lastIndex);
 
     return (
-<div>
+        <div>
 
-        <div className="listP_container">
+            <div className="listP_container">
 
-            <div className="listP_left">
-                <ProductsTypes  />
-                <ProductPrices />
-           
-            </div>
+                <div className="listP_left">
+                    <ProductsTypes/>
+                    <ProductPrices/>
 
-            <div className="listP_right">
-    
-                <div className="listProductsItem">
-                    <ProductsList productData={currentPosts}/>
                 </div>
 
-                <div className="pagination_pages">
-                    <Pagination count={npages} variant="outlined" color="primary" page={currentPage}
-                                onChange={handleChange}/>
+                <div className="listP_right">
+
+                    <div className="listProductsItem">
+                        <ProductsList productData={currentPosts}/>
+                    </div>
+
+                    <div className="pagination_pages">
+                        <Pagination count={npages} variant="outlined" color="primary" page={currentPage}
+                                    onChange={handleChange}/>
+                    </div>
+
                 </div>
 
             </div>
-
         </div>
-</div>
     );
 }
 
