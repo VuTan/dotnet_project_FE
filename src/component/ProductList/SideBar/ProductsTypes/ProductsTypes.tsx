@@ -1,19 +1,31 @@
 import React, { useState } from 'react';
 import './ProductsTypes.scss';
-import Input from "../input/Input";
+import Input from "../input/input";
 
-function ProductsTypes() {
-    const [expandedCategory, setExpandedCategory] = useState(null); // Quản lý trạng thái mở rộng
-    const [selectedCategory, setSelectedCategory] = useState(null); // Quản lý danh mục cha đã chọn
-    const [selectedSubcategory, setSelectedSubcategory] = useState(null); // Quản lý danh mục con đã chọn
+interface TypeOption {
+    classnames: string;
+    categogyID: string;
+    value: string;
+    title: string;
+    subcategories: string[];
+}
 
-    const typesOptions = [
+interface ProductsTypesProps {
+    handleChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+}
+
+const ProductsTypes: React.FC<ProductsTypesProps> = ({ handleChange }) => {
+    const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
+    const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+    const [selectedSubcategory, setSelectedSubcategory] = useState<string | null>(null);
+
+    const typesOptions: TypeOption[] = [
         {
             classnames: "coffee", categogyID: "2", value: "coffee", title: "Cà Phê",
             subcategories: ["Cà Phê Highlight", "Cà Phê Việt Nam", "Cà Phê Máy", "Cold Brew"]
         },
         {
-            classnames: "fruitsBlend", categogyId: "5", value: "fruitsBlend", title: "Trái Cây Xay 0°C",
+            classnames: "fruitsBlend", categogyID: "5", value: "fruitsBlend", title: "Trái Cây Xay 0°C",
             subcategories: ["Trái Cây Xay 0°C"]
         },
         {
@@ -42,32 +54,25 @@ function ProductsTypes() {
         },
     ];
 
-       // Hàm xử lý khi chọn "Tất cả"
-       const handleAllTypeClick = () => {
+    const handleAllTypeClick = () => {
         setSelectedCategory('all');
         setExpandedCategory(null);
         setSelectedSubcategory(null);
     };
 
-    // Hàm xử lý sự kiện khi nhấn vào danh mục cha
-    const handleToggle = (value) => {
-        console.log(`Toggling category: ${value}`); // Log khi nhấn vào danh mục cha
-        console.log('Previous Expanded Category:', expandedCategory); // Log trạng thái trước
+    const handleToggle = (value: string) => {
         const newExpandedCategory = expandedCategory === value ? null : value;
-        console.log('New Expanded Category:', newExpandedCategory); // Log trạng thái mới
         setExpandedCategory(newExpandedCategory);
         setSelectedCategory(value);
         setSelectedSubcategory(null);
     };
 
-    // Hàm xử lý sự kiện khi nhấn vào danh mục con
-    const handleSubcategoryClick = (subcategory) => {
-        console.log(`Clicked subcategory: ${subcategory}`); // Log khi nhấn vào danh mục con
+    const handleSubcategoryClick = (subcategory: string) => {
         setSelectedSubcategory(subcategory);
     };
 
     return (
-         <div className="productsType_container">
+        <div className="productsType_container">
             <h2>Danh mục</h2>
             <div className="checkbox_wrap">
                 <label
@@ -86,10 +91,10 @@ function ProductsTypes() {
                         >
                             <Input
                                 classnames={`${type.classnames} ${selectedCategory === type.value ? 'selected' : ''}`}
-                                categogyID={type.categogyID}
                                 name="types"
                                 value={type.value}
                                 title={type.title}
+                                handleChange={handleChange}
                             />
                         </label>
 
@@ -109,6 +114,6 @@ function ProductsTypes() {
             </div>
         </div>
     );
-}
+};
 
 export default ProductsTypes;

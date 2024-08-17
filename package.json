@@ -5,7 +5,7 @@
   "dependencies": {
     "@emotion/react": "^11.13.0",
     "@emotion/styled": "^11.13.0",
-
+    "@mui/icons-material": "^5.16.7",
     "@mui/material": "^5.16.7",
     "@reduxjs/toolkit": "^2.2.7",
     "@testing-library/jest-dom": "^5.17.0",
@@ -58,14 +58,8 @@
     ]
   },
   "devDependencies": {
-
+    "@types/react-slick": "^0.23.13",
     "resolve-url-loader": "^5.0.0",
-
-    "@types/classnames": "^2.3.0",
-    "@types/js-cookie": "^3.0.6",
-    "@types/react-router-dom": "^5.3.3",
-    "css-loader": "^7.1.2",
-    "sass": "^1.77.8",
-    "style-loader": "^4.0.0"
+    "sass": "^1.77.8"
   }
 }
