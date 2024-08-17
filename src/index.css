@@ -1,34 +1,3 @@
-@charset "UTF-8";
-/*sửa font, sửa kích thước thẻ*/
-body {
-  margin: 0;
-  padding: 0;
-  font-family: "Arial";
-}
-body p {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 32.67px;
-}
-body h1 {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 32.67px;
-}
-body h2 {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 32.67px;
-}
-body h3 {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 32.67px;
-}
-body h4 {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 32.67px;
-}
+
 
 /*# sourceMappingURL=index.css.map */

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect} from 'react';
 import './Header.scss';
 import MiddleHeader from "./MiddleHeader/middleHeader";
 import NavBar from "./NavBar/navbar";
@@ -9,11 +9,7 @@ const Header = () => {
 
     const handleScroll = () => {
         const currentScrollPos = window.scrollY;
-        if (prevScrollPos > currentScrollPos) {
-            setIsScrollingUp(true);
-        } else {
-            setIsScrollingUp(false);
-        }
+        setIsScrollingUp(prevScrollPos > currentScrollPos);
         setPrevScrollPos(currentScrollPos);
     };
 
@@ -25,9 +21,9 @@ const Header = () => {
     }, [prevScrollPos]);
 
     return (
-        <header className={"header-hidden"}>
-            <MiddleHeader />
-            <NavBar />
+        <header className={`header ${isScrollingUp ? 'header-show' : 'header-hide'}`}>
+            <MiddleHeader/>
+            <NavBar/>
         </header>
     );
 };

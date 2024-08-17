@@ -1,17 +1,18 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { PATH } from "./utils/path";
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import {PATH} from "./utils/path";
 import MasterLayout from "./layout/masterLayout";
 import ListPage from './Pages/ListProducts/ListPage';
 import DetailPage from './Pages/ProductsDetail/DetailPage';
-const renderRouter =() =>{
+
+const renderRouter = () => {
     const userRouters = [
         {
-            path:PATH.USER.LISTPRODUCT,
+            path: PATH.USER.LISTPRODUCT,
             component: <ListPage/>
         },
         {
-            path : PATH.USER.PRODUCTDETAIL,
-            component:<DetailPage/>
+            path: PATH.USER.PRODUCTDETAIL,
+            component: <DetailPage/>
         },
 
     ];
@@ -19,14 +20,14 @@ const renderRouter =() =>{
     return (
         <MasterLayout>
             <Routes>
-            {userRouters.map((item, key) => (
-                <Route key={key} path={item.path} element={item.component} />
-            ))}
+                {userRouters.map((item, key) => (
+                    <Route key={key} path={item.path} element={item.component}/>
+                ))}
             </Routes>
-</MasterLayout>
+        </MasterLayout>
     );
 }
-const RouterCustom  = () =>{
+const RouterCustom = () => {
     return renderRouter();
 }
 export default RouterCustom;

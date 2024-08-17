@@ -9,8 +9,8 @@ const publicRoutes = [
     {path: '/', component: Home},
     {path: '/store', component: Store},
     {path: '/login', component: Login},
-    {path: '/signup', component: Signup}
- ];
+    {path: '/signup', component: Signup},
+];
 
 
 export {publicRoutes};
