@@ -1,4 +1,4 @@
-import React, { useState} from "react";
+import React, {useState} from "react";
 import {AiOutlineUser} from "react-icons/ai";
 import {Link} from "react-router-dom";
 import "./login.scss";
@@ -20,7 +20,7 @@ function Login() {
     const user = useSelector((state: RootState) => state.user);
 
     return (
-        <div className={"container"}>
+        <div className={"Container"}>
             <form className={"form"} onSubmit={handleSubmit}>
                 <div>
                     <div className={"heading"}>

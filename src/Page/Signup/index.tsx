@@ -30,7 +30,7 @@ function Signup() {
     }
 
     return (
-        <div className={"container"}>
+        <div className={"Container"}>
             <form className={"form"} onSubmit={handleSubmit}>
                 <div className={"heading"}>
                     <h2>Đăng Ký Tài Khoản</h2>
