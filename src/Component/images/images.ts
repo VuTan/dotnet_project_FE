@@ -5,6 +5,14 @@ const images = {
     slider3: require('./slider3.webp'),
     slider4: require('./slider4.webp'),
     slider5: require('./slider5.webp'),
-    ttc: require('./tratraicayxay.webp')
+    ttc: require('./tratraicayxay.webp'),
+    bgrContent3: require('./backgroundContent3.png'),
+    content3: require('./content3.webp'),
+    content4: require('./content4Slider2.webp'),
+    content4Slider1: require('./content4Slider1.webp'),
+    content4Slider2: require('./content4Slider2.webp'),
+    content4Slider3: require('./content4Slider3.webp'),
+    content4Slider4: require('./content4Slider4.webp'),
+    content4Slider5: require('./content4Slider5.webp'),
 };
 export default images;

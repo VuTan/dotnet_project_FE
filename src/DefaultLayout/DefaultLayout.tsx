@@ -1,7 +1,8 @@
 import React, {ReactNode} from 'react';
-// import Footer from "../components/Footer/Footer";
 import Header from "../Component/Header/Header";
 import './DefaultLayout.scss';
+import Footer from "../Component/Footer/Footer";
+
 interface DefaultLayoutProps {
     children: ReactNode;
 }
@@ -14,7 +15,7 @@ const DefaultLayout: React.FC<DefaultLayoutProps> = ({children}) => {
 
             <div className={"Container"}>{children}</div>
 
-            {/*<Footer/>*/}
+            <Footer/>
         </div>
     );
 };

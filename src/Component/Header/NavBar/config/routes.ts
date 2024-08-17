@@ -4,8 +4,9 @@ const routes = {
     homeStory: '/homeStory',
     inspiration: '/inspiration',
     store: '/store',
-    login:'/login',
-    signup:'/signup'
+    login: '/login',
+    signup: '/signup',
+    logout: '/logout'
 
 };
 
