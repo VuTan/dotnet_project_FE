@@ -4,7 +4,6 @@
 }
 .slick-slider .slick-list {
   padding-top: 20px;
-  height: -moz-fit-content;
   height: fit-content;
   overflow: hidden;
 }
@@ -37,4 +36,6 @@
   justify-content: center;
   display: flex;
   width: 98%;
-}/*# sourceMappingURL=SliderCardsStyles.css.map */
+}
+
+/*# sourceMappingURL=SliderCardsStyles.css.map */

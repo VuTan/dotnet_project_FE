@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import './ListPageStyles.scss';
 import { Pagination } from "@mui/material";
-import ProductsList from "../../component/ProductList/ProductsList/ProductsList";
+import ProductsList from "../../Component/ProductList/ProductsList/ProductsList";
 import productsData from "../../data/productsData";
-import ProductPrices from "../../component/ProductList/SideBar/ProductsPrices/ProductPrices";
-import ProductsTypes from "../../component/ProductList/SideBar/ProductsTypes/ProductsTypes";
+import ProductPrices from "../../Component/ProductList/SideBar/ProductsPrices/ProductPrices";
+import ProductsTypes from "../../Component/ProductList/SideBar/ProductsTypes/ProductsTypes";
 import { useLocation } from "react-router-dom";
 
 const ListPage: React.FC = () => {

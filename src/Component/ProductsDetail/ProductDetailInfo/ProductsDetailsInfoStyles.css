@@ -16,7 +16,6 @@
   margin-right: 37px;
 }
 .info_container .info_row .info_section .section_2 {
-  height: -moz-fit-content;
   height: fit-content;
 }
 .info_container .info_row .info_section .section_2 .option_sizes .option_title {
@@ -203,4 +202,6 @@
 }
 .info_container .info_row .info_section .section_4 .btn_buy:hover {
   background-color: #f09c42;
-}/*# sourceMappingURL=ProductsDetailsInfoStyles.css.map */
+}
+
+/*# sourceMappingURL=ProductsDetailsInfoStyles.css.map */

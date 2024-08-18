@@ -1,10 +1,10 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import './detailsPageStyle.scss';
-import ProductsDetailsImgs from "../../component/ProductsDetail/productDetailsImgs/ProductsDetailsImgs";
-import ProductsDetailsInfo from "../../component/ProductsDetail/ProductDetailInfo/ProductsDetailsInfo";
-import SliderCards from "../../component/ProductsDetail/SliderCards/SliderCards";
-import ProductDiscription from "../../component/ProductsDetail/ProductDetailsDescription/ProductDiscription";
+import ProductsDetailsImgs from "../../Component/ProductsDetail/productDetailsImgs/ProductsDetailsImgs";
+import ProductsDetailsInfo from "../../Component/ProductsDetail/ProductDetailInfo/ProductsDetailsInfo";
+import SliderCards from "../../Component/ProductsDetail/SliderCards/SliderCards";
+import ProductDiscription from "../../Component/ProductsDetail/ProductDetailsDescription/ProductDiscription";
 
 // Define a type for URL parameters
 interface RouteParams {

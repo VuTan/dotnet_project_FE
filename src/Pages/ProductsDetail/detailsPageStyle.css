@@ -7,7 +7,6 @@
   padding: 20px;
 }
 .pdetails_main .pdetails_container .card1_container, .pdetails_main .pdetails_container .card2_container, .pdetails_main .pdetails_container .card3_container, .pdetails_main .pdetails_container .card4_container {
-  height: -moz-fit-content;
   height: fit-content;
   background-color: #ffffff;
   width: 85%;
@@ -30,4 +29,6 @@
 .pdetails_main .pdetails_container .Label_sameTypes {
   font-weight: bold;
   text-align: left;
-}/*# sourceMappingURL=detailsPageStyle.css.map */
+}
+
+/*# sourceMappingURL=detailsPageStyle.css.map */

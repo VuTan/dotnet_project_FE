@@ -1,6 +1,5 @@
 .productsType_container {
   color: #666666;
-  height: -moz-fit-content;
   height: fit-content;
   display: flex;
   flex-direction: column;
@@ -41,4 +40,6 @@
 }
 .productsType_container .checkbox_wrap .subcategory_item:hover {
   color: #E57905;
-}/*# sourceMappingURL=ProductsTypes.css.map */
+}
+
+/*# sourceMappingURL=ProductsTypes.css.map */

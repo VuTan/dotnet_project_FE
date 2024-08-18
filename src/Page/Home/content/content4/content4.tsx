@@ -1,6 +1,7 @@
 import React, {useEffect, useRef, useState} from "react";
 import {Box, Container, Grid} from "@mui/material";
 import '../content.scss';
+// @ts-ignore
 import img from "../../../../Component/images/images";
 import {Link} from "react-router-dom";
 
