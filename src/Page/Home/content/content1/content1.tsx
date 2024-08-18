@@ -1,5 +1,6 @@
 import React from "react";
 import {Box, Container, Grid, Paper} from "@mui/material";
+// @ts-ignore
 import img from "../../../../Component/images/images";
 import '../content.scss'
 import {Link} from "react-router-dom";

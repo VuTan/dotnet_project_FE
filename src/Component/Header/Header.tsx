@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import './Header.scss';
+// @ts-ignore
 import MiddleHeader from "./MiddleHeader/middleHeader";
+// @ts-ignore
 import NavBar from "./NavBar/navbar";
 
 const Header = () => {

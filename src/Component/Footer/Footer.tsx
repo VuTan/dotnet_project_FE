@@ -1,6 +1,6 @@
 import './Footer.scss';
 import {Link} from "react-router-dom";
-import images from "../../Component/images/images";
+import images from "../images/images";
 import {Box, Container, Grid} from "@mui/material";
 import {FaPhoneAlt} from "react-icons/fa";
 

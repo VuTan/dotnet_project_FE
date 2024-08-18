@@ -5,6 +5,7 @@ import {Link, useLocation, useNavigate} from 'react-router-dom';
 import config from "./config/config";
 import {FaUser} from "react-icons/fa";
 import {useDispatch, useSelector} from 'react-redux';
+// @ts-ignore
 import {logout} from '../../../redux/user.reducer';
 import {RootState} from "../../../redux/store";
 import {CiLogin, CiLogout} from "react-icons/ci";

@@ -12,7 +12,6 @@
   color: inherit;
 }
 .card .card_top {
-  height: -moz-fit-content;
   height: fit-content;
   width: 100%;
 }
@@ -24,8 +23,7 @@
   height: 279px;
   border-radius: 8px;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   transition: transform 0.3s ease;
   cursor: pointer;
 }
@@ -45,7 +43,6 @@
   font-size: 14px;
   margin: 0 10px 10px 10px;
   line-height: 1.5;
-  height: -moz-fit-content;
   height: fit-content;
   text-transform: uppercase;
   font-weight: bold;
@@ -80,10 +77,11 @@
   align-items: center;
   justify-content: center;
   border-radius: 22%;
-  min-width: -moz-fit-content;
   min-width: fit-content;
   height: 30px;
   cursor: pointer;
   background-color: #E57905;
   margin-right: 15px;
-}/*# sourceMappingURL=ProductItemStyles.css.map */
+}
+
+/*# sourceMappingURL=ProductItemStyles.css.map */

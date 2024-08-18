@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './index.scss';
+// @ts-ignore
 import img from '../../../Component/images/images';
 
 interface Banner {

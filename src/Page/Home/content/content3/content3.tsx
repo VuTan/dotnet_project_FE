@@ -1,6 +1,7 @@
 import React from "react";
 import {Box, Container, Grid} from "@mui/material";
 import '../content.scss';
+// @ts-ignore
 import img from "../../../../Component/images/images";
 
 function Content3() {

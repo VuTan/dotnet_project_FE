@@ -1,6 +1,5 @@
 .productsPrices_container {
   color: #666666;
-  height: -moz-fit-content;
   height: fit-content;
   display: flex;
   flex-direction: column;
@@ -12,4 +11,6 @@
   font-size: 1.3rem;
   text-transform: uppercase;
   color: #E57905;
-}/*# sourceMappingURL=ProductPrices.css.map */
+}
+
+/*# sourceMappingURL=ProductPrices.css.map */
