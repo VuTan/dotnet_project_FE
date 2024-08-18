@@ -14,5 +14,10 @@ const images = {
     content4Slider3: require('./content4Slider3.webp'),
     content4Slider4: require('./content4Slider4.webp'),
     content4Slider5: require('./content4Slider5.webp'),
+    store1: require('./store1.webp'),
+    store2: require('./store2.jpg'),
+    store3: require('./store3.webp'),
+    store4: require('./store4.webp'),
+    bgStore: require('./backgorundStore.webp')
 };
 export default images;
