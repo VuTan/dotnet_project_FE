@@ -7,6 +7,8 @@ import ProductPrices from "../../Component/ProductList/SideBar/ProductsPrices/Pr
 import ProductsTypes from "../../Component/ProductList/SideBar/ProductsTypes/ProductsTypes";
 import {useLocation} from "react-router-dom";
 
+
+
 const ListPage: React.FC = () => {
     const location = useLocation();
     const queryParams = new URLSearchParams(location.search);
