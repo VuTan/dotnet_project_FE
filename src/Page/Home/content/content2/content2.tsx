@@ -1,17 +1,32 @@
-import React from "react";
-import {Box, Container, Grid, Paper} from "@mui/material";
-import img from "../../../../Component/images/images";
-import '../content.scss'
-import {Link} from "react-router-dom";
+import React from 'react';
+import {Box, Container, Grid} from '@mui/material';
+import productsData from '../../../../data/productsData';
+import ProductItem from '../../../../Component/ProductList/ProductItem/ProductItem';
+import {Product} from "../../../../utils/type";
 
-function Content2() {
+const Content2: React.FC = () => {
+    // Group products by categogyID
+    const groupedProducts: Record<number, Product[]> = productsData.reduce((acc: Record<number, Product[]>, product) => {
+        const {categogyID} = product;
+        if (!acc[categogyID]) {
+            acc[categogyID] = [];
+        }
+        acc[categogyID].push(product);
+        return acc;
+    }, {});
+
+    // Get the first product from each group
+    const selectedProducts = Object.values(groupedProducts).map(products => products[0]);
+
     return (
         <Box>
             <Container>
                 <Grid container spacing={3}>
-                    <Grid item xs={12} md={3} className={'content2'}>
-                        <div>Thay thế 4 món vào đây</div>
-                    </Grid>
+                    {selectedProducts.map((product) => (
+                        <Grid item xs={12} md={3} key={product.id}>
+                            <ProductItem productid={product.id}/>
+                        </Grid>
+                    ))}
                 </Grid>
             </Container>
         </Box>

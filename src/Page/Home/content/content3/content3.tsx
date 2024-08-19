@@ -9,10 +9,10 @@ function Content3() {
         <Box>
             <Container className="content3">
                 <Grid container spacing={3}>
-                    <Grid item xs={6} className={'left'}>
+                    <Grid item xs={6} className={'left2'}>
                         {/* Nội dung của ô bên trái */}
                     </Grid>
-                    <Grid item xs={6} className={'right'}>
+                    <Grid item xs={6} className={'right2'}>
                         <img src={img.content3} alt={`content3`} className="images3"/>
                         <div className={"idea"}>Được trồng trọt và chăm chút kỹ lưỡng, nuôi dưỡng từ thổ nhưỡng phì
                             nhiêu, nguồn nước mát lành, bao bọc bởi mây và sương cùng nền nhiệt độ mát mẻ quanh năm,

@@ -1,17 +1,20 @@
+import React from 'react';
 import './Store.scss';
 import {Link} from 'react-router-dom';
 import storeImages from '../../Component/images/images';
 import Box from "@mui/system/Box";
-import React from "react";
 import {Container, Grid, Paper} from "@mui/material";
-import img from "../../Component/images/images";
+import ProductsTypes from '../../Component/ProductList/SideBar/ProductsTypes/ProductsTypes'; // Đảm bảo bạn đã nhập đúng đường dẫn
 
 function Store() {
+    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        // Xử lý sự kiện khi giá trị của các ô nhập liệu thay đổi
+        console.log("Selected value:", event.target.value);
+    };
+
     return (
         <>
-
             <div className={"Container"}>
-
                 <div className={"background"}>
                     <img
                         src={storeImages.bgStore}
@@ -19,17 +22,16 @@ function Store() {
                         style={{height: '200px', width: '100%', objectFit: 'cover'}}
                     />
                     <div className={"overlay"}></div>
-                    {/* Lớp phủ tối */}
                 </div>
                 <Box>
                     <Container>
                         <Grid container spacing={3}>
-                            <Grid item xs={2} className={'left4'}>
+                            <Grid item xs={2.5} className={'left4'}>
                                 <Paper elevation={3}>
-                                    <div>sideBar ở đây</div>
+                                    <ProductsTypes handleChange={handleChange}/>
                                 </Paper>
                             </Grid>
-                            <Grid item xs={10} className={'right4'}>
+                            <Grid item xs={9.5} className={'right4'}>
                                 <div className={"wrap-content"}>
                                     <div className={"header"}>
                                         <h3>Chào Mừng Đến Với The Coffee House</h3>
@@ -89,8 +91,6 @@ function Store() {
                                             thức hương vị cà phê. The Coffee House còn truyền cảm hứng về lối sống hiện
                                             đại, tiếp cận và bắt nhịp với những văn hoá mới, phong cách mới đầy trẻ
                                             trung đang du nhập vào Việt Nam.
-
-
                                         </p>
                                         <div className={"image"}>
                                             <img src={storeImages.store1} alt="img1"/>
@@ -106,7 +106,6 @@ function Store() {
                                             được rang xay tại chỗ hoặc các loại thức uống đậm chất sáng tạo và đầy mới
                                             lạ thay vì chỉ gói gọn trong những loại thức uống cà phê truyền thống như cà
                                             phê đen đá, cà phê sữa, bạc sỉu…
-
                                         </p>
                                     </div>
                                 </div>

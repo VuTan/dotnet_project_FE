@@ -24,7 +24,7 @@
   background: url('../../../Component/images/backgroundContent3.png') top center / cover no-repeat;
   height: 80vh; /* Đặt chiều cao tối thiểu để hiển thị toàn bộ ảnh nền */
   width: 100%;
-  margin-top: 3%;
+  margin-top: 7%;
 
   .images3 {
     width: 75%;
@@ -105,11 +105,22 @@
   }
 
 
-
   .right1 {
     flex: 0 0 65%; /* Chiếm 60% chiều rộng */
     max-width: 65%; /* Đảm bảo không vượt quá 60% */
   }
 
 
+}
+
+.right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: auto;
+
+  .card {
+    flex: 1;
+    margin: 0 10px;
+  }
 }
