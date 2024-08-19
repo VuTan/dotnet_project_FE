@@ -4,8 +4,11 @@ import {Box, Container, Grid, Paper} from "@mui/material";
 import img from "../../../../Component/images/images";
 import '../content.scss'
 import {Link} from "react-router-dom";
+import ProductItem from '../../../../Component/ProductList/ProductItem/ProductItem';
+import productsData from "../../../../data/productsData";
 
 function Content1() {
+    const getTwoProducts = productsData.slice(0, 2);
     return (
         <Box>
             <Container>
@@ -18,7 +21,9 @@ function Content1() {
                         </Paper>
                     </Grid>
                     <Grid item xs={6} className={'right'}>
-                        <div>Thêm 2 món zô đây</div>
+                        {getTwoProducts.map(product => (
+                            <ProductItem key={product.id} productid={product.id}/>
+                        ))}
                     </Grid>
                 </Grid>
             </Container>
