@@ -1,4 +1,5 @@
 .productsType_container {
+  font-family: "SF Pro Text", sans-serif;
   color: #666666;
   height: fit-content;
   display: flex;
@@ -12,13 +13,17 @@
   text-transform: uppercase;
   color: #E57905;
 }
+.productsType_container label {
+  font-size: 1rem;
+}
 .productsType_container .selected {
+  margin-bottom: 5px;
   font-weight: bold;
   color: #E57905;
 }
 .productsType_container .checkbox_wrap .subcategory_list {
   cursor: pointer;
-  display: block;
+  display: none;
   line-height: 1.5rem;
   list-style-type: disc;
   padding: 0;
@@ -28,7 +33,14 @@
 .productsType_container .checkbox_wrap .subcategory_list.show {
   display: block;
 }
+.productsType_container .checkbox_wrap .subcategory_item {
+  position: relative;
+  cursor: pointer;
+  line-height: 1.5rem;
+  padding: 0.5rem 0;
+}
 .productsType_container .checkbox_wrap .subcategory_item::before {
+  content: "";
   position: absolute;
   left: -15px;
   top: 50%;

@@ -1,4 +1,5 @@
 .productsType_container {
+    font-family: 'SF Pro Text', sans-serif;
     color: #666666;
     height: fit-content;
     display: flex;
@@ -12,8 +13,11 @@
         text-transform: uppercase;
         color: #E57905;
     }
-
+    label {
+        font-size: 1rem;
+    }
     .selected {
+        margin-bottom: 5px;
         font-weight: bold;
         color: #E57905;
     }
@@ -21,7 +25,7 @@
     .checkbox_wrap {
         .subcategory_list {
             cursor: pointer;
-            display: block;
+            display: none;
             line-height: 1.5rem;
             list-style-type: disc;
             padding: 0;
@@ -33,19 +37,27 @@
             }
         }
 
-        .subcategory_item::before {
-            position: absolute;
-            left: -15px;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background-color: #666666;
-        }
+        .subcategory_item {
+            position: relative;
+            cursor: pointer;
+            line-height: 1.5rem;
+            padding: 0.5rem 0;
 
-        .subcategory_item:hover {
-            color: #E57905;
+            &::before {
+                content: '';
+                position: absolute;
+                left: -15px;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background-color: #666666;
+            }
+
+            &:hover {
+                color: #E57905;
+            }
         }
     }
 }

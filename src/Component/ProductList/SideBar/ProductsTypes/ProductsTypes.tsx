@@ -55,19 +55,28 @@ const ProductsTypes: React.FC<ProductsTypesProps> = ({ handleChange }) => {
     ];
 
     const handleAllTypeClick = () => {
+        console.log("Clicked All Types");
         setSelectedCategory('all');
         setExpandedCategory(null);
         setSelectedSubcategory(null);
     };
 
     const handleToggle = (value: string) => {
-        const newExpandedCategory = expandedCategory === value ? null : value;
-        setExpandedCategory(newExpandedCategory);
+        console.log(`Toggling category: ${value}, Current expanded: ${expandedCategory}`);
+
+        // Avoid unnecessary updates
+        if (expandedCategory === value) {
+            console.log(`Category ${value} is already expanded, no update needed`);
+            return;
+        }
+
+        setExpandedCategory(value);
         setSelectedCategory(value);
         setSelectedSubcategory(null);
     };
 
     const handleSubcategoryClick = (subcategory: string) => {
+        console.log(`Selected subcategory: ${subcategory}`);
         setSelectedSubcategory(subcategory);
     };
 

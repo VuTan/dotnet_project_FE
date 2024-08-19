@@ -1,4 +1,5 @@
 .productsPrices_container {
+  font-family: "SF Pro Text", sans-serif;
   color: #666666;
   height: fit-content;
   display: flex;
@@ -10,6 +11,13 @@
 .productsPrices_container h2 {
   font-size: 1.3rem;
   text-transform: uppercase;
+  color: #E57905;
+}
+.productsPrices_container label {
+  font-size: 1rem;
+}
+.productsPrices_container .selected {
+  font-weight: bold;
   color: #E57905;
 }
 

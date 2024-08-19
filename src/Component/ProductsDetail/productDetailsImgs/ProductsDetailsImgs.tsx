@@ -12,16 +12,13 @@ interface ProductsDetailsImgsProps {
 }
 
 const ProductsDetailsImgs: React.FC<ProductsDetailsImgsProps> = ({ productId }) => {
-    // Convert productId to a string for comparison
+    // Tìm sản phẩm, nếu không tìm thấy trả về đối tượng mặc định
     const product: Product | undefined = productsData.find(item => item.id === productId.toString());
 
-    if (!product) {
-        return <div>Product not found</div>;
-    }
+    // Nếu không có sản phẩm, sử dụng giá trị mặc định (images rỗng) để đảm bảo các hooks luôn được gọi
+    const images = product ? product.images : [{ url: "" }, { url: "" }, { url: "" }, { url: "" }];
 
-    const images = product.images;
-
-    // Ensure hooks are not inside any conditionals or functions
+    // Gọi các hooks bên ngoài mọi điều kiện
     const [image, setImage] = useState({
         img1: images[0].url,
         img2: images[1].url,
@@ -43,6 +40,11 @@ const ProductsDetailsImgs: React.FC<ProductsDetailsImgsProps> = ({ productId }) 
         setPosition({ x, y });
         setCursorPosition({ x: e.pageX - left, y: e.pageY - top });
     };
+
+    // Render nội dung dựa trên việc có sản phẩm hay không
+    if (!product) {
+        return <div>Product not found</div>;
+    }
 
     return (
         <div className="imgs_container">
