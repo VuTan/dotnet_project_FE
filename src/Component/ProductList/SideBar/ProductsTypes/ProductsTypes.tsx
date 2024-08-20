@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import './ProductsTypes.scss';
-import Input from "../input/input";
+import Input from '../input/input';
+import CategoryList from './CtegoryList/CategoryList';
 
 interface TypeOption {
     classnames: string;
@@ -14,7 +15,7 @@ interface ProductsTypesProps {
     handleChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const ProductsTypes: React.FC<ProductsTypesProps> = ({ handleChange }) => {
+const ProductsTypes: React.FC<ProductsTypesProps> = ({handleChange}) => {
     const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
     const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
     const [selectedSubcategory, setSelectedSubcategory] = useState<string | null>(null);
@@ -64,7 +65,6 @@ const ProductsTypes: React.FC<ProductsTypesProps> = ({ handleChange }) => {
     const handleToggle = (value: string) => {
         console.log(`Toggling category: ${value}, Current expanded: ${expandedCategory}`);
 
-        // Avoid unnecessary updates
         if (expandedCategory === value) {
             console.log(`Category ${value} is already expanded, no update needed`);
             return;
@@ -83,44 +83,15 @@ const ProductsTypes: React.FC<ProductsTypesProps> = ({ handleChange }) => {
     return (
         <div className="productsType_container">
             <h2>Danh mục</h2>
-            <div className="checkbox_wrap">
-                <label
-                    className={`label_sidebar ${selectedCategory === 'all' ? 'selected' : ''}`}
-                    onClick={handleAllTypeClick}
-                >
-                    <input type="radio" className="allTypes" name="types" value="all" />
-                    <span className="choose"></span> Tất cả
-                </label>
-
-                {typesOptions.map((type) => (
-                    <div key={type.value}>
-                        <label
-                            className={`label_sidebar ${selectedCategory === type.value ? 'selected' : ''}`}
-                            onClick={() => handleToggle(type.value)}
-                        >
-                            <Input
-                                classnames={`${type.classnames} ${selectedCategory === type.value ? 'selected' : ''}`}
-                                name="types"
-                                value={type.value}
-                                title={type.title}
-                                handleChange={handleChange}
-                            />
-                        </label>
-
-                        <ul className={`subcategory_list ${expandedCategory === type.value ? 'show' : ''}`}>
-                            {type.subcategories.map((subcategory, index) => (
-                                <li
-                                    key={index}
-                                    className={`subcategory_item ${selectedSubcategory === subcategory ? 'selected' : ''}`}
-                                    onClick={() => handleSubcategoryClick(subcategory)}
-                                >
-                                    {subcategory}
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-                ))}
-            </div>
+            <CategoryList
+                typesOptions={typesOptions}
+                expandedCategory={expandedCategory}
+                selectedCategory={selectedCategory}
+                selectedSubcategory={selectedSubcategory}
+                onToggle={handleToggle}
+                onSubcategoryClick={handleSubcategoryClick}
+                onSelectAll={handleAllTypeClick}
+            />
         </div>
     );
 };
