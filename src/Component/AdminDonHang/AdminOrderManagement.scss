@@ -1,0 +1,12 @@
+.admin-OrderPage {
+  font-family: 'SF Pro Text', sans-serif;
+  display: grid;
+  grid-template-columns: 0.5fr 2fr;
+  .adminOrder_sidebar {
+    width: 100%;
+    background-color: white;
+  }
+  .mainOrder-content {
+    background-color: #FFF7E6;
+  }
+}

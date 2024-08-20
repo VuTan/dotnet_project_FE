@@ -1,0 +1,12 @@
+.admin-page {
+  font-family: 'SF Pro Text', sans-serif;
+  display: grid;
+  grid-template-columns: 0.5fr 2fr;
+  .admin_sidebar {
+    width: 100%;
+background-color: white;
+  }
+.main-content {
+  background-color: #FFF7E6;
+}
+}

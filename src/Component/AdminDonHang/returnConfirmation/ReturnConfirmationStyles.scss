@@ -1,0 +1,72 @@
+.ReturnConfirmation-container {
+  margin: 20px;
+  padding: 20px;
+  background-color: white;
+  .bRougq {
+    text-align: center;
+  }
+  .rdt_Table {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  .rdt_TableTitle {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  .rdt_TableHead {
+    text-align: center;
+    font-size: 1rem;
+    background-color: #f1f1f1;
+    color: #E57905;
+
+    .rdt_TableCol {
+      font-weight: bold;
+      padding: 12px;
+    }
+  }
+
+  .rdt_TableRow {
+    &:nth-child(even) {
+      background-color: #fff7e6;
+    }
+    &:nth-child(odd) {
+      background-color: white;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .rdt_TableCell {
+    font-size: 1rem;
+    padding: 12px;
+    color: #555;
+  }
+
+  .rdt_Pagination {
+    background-color: white;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+  }
+  //
+  .btn-ReturnConfirmation {
+    background-color: #E57905;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    margin: 4px 2px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .btn-ReturnConfirmation:hover {
+    background-color:  #e8973f;
+  }
+}
