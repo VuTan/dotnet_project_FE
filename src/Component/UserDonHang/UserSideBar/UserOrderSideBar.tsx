@@ -1,5 +1,5 @@
 // src/Component/UserDonHang/UserSideBar/UserOrderSideBar.tsx
-import React, { useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import './UserOrderSideBarStyle.scss';
 import { Link, useLocation } from 'react-router-dom';
 import config from '../config/config';
@@ -8,26 +8,35 @@ interface UserOrderSideBarProps {}
 
 const UserOrderSideBar: React.FC<UserOrderSideBarProps> = () => {
     const location = useLocation();
-    const [selectedType, setSelectedType] = useState<string | null>(() => {
-        // Lấy phần tử cuối của đường link hiện tại
+    const [selectedType, setSelectedType] = useState<string | null>(null);
+
+    // Lấy phần tử cuối của đường link hiện tại
+        useEffect(() => {
         const path = location.pathname.split('/').pop();
         switch (path) {
             case 'allOrdersUser':
-                return 'all_dh';
+                setSelectedType('all_dh') ;
+                break;
             case 'confirmedOrdersUser':
-                return 'xn_dh';
+                setSelectedType('xn_dh') ;
+                break;
             case 'packagingOrdersUser':
-                return 'cb_dh';
+                setSelectedType('cb_dh') ;
+                break;
             case 'shippingHandoversUser':
-                return 'vc_dh';
+                setSelectedType('vc_dh') ;
+                break;
             case 'completedOrdersUser':
-                return 'ht_dh';
+                setSelectedType('ht_dh') ;
+                break;
             case 'cancelledOrdersUser':
-                return 'h_dh';
+                setSelectedType('h_dh') ;
+                break;
             default:
-                return null;
+                setSelectedType(null) ;
+                break;
         }
-    });
+        }, [location.pathname]);
 
     const handleToggle = (value: string) => {
         setSelectedType(value);
