@@ -4,12 +4,13 @@ import './AdminSideBar.scss';
 import {Link, useLocation} from "react-router-dom";
 import config from "../AdminDonHang/config/config";
 
+
 interface AdminSideBarProps {
     roles: string;
     currentAdminMenu: string;
 }
 
-const AdminSideBar: React.FC<AdminSideBarProps> = ({ roles, currentAdminMenu }) => {
+const AdminSideBar: React.FC<AdminSideBarProps> = ({roles, currentAdminMenu}) => {
     const [selectedType, setSelectedType] = useState<string | null>(null);
     const location = useLocation();
     const handleToggle = (value: string) => {
@@ -18,7 +19,7 @@ const AdminSideBar: React.FC<AdminSideBarProps> = ({ roles, currentAdminMenu }) 
     };
 
     const handleClick = (path: string) => {
-       if (location.pathname === path) {
+        if (location.pathname === path) {
             window.location.reload();
         }
     };
@@ -39,24 +40,17 @@ const AdminSideBar: React.FC<AdminSideBarProps> = ({ roles, currentAdminMenu }) 
                 )}
 
                 {/* Customer Management */}
-                {roles.includes("customer") && (
-                    <li className={`nav-item ${currentAdminMenu === "customer" ? "" : "collapsed"}`}>
-                        <a className="nav-link" href="#">
-                              <span className={`text_sidebar ${selectedType === 'qli_kh' ? 'selected' : ''}`}
-                                    onClick={() => handleToggle('qli_kh')}>Quản lý khách hàng</span>
-                        </a>
+                {roles.includes("user") && (
+                    <li className={`nav-item ${currentAdminMenu === "user" ? "" : "collapsed"}`}>
+                        <Link to="adminUserManager" className="nav-link">
+
+                            <span className={`text_sidebar ${selectedType === 'qli_nd' ? 'selected' : ''}`}
+                                  onClick={() => handleToggle('qli_nd')}>Quản lý người dùng</span>
+                        </Link>
+
                     </li>
                 )}
 
-                {/* Employee Management */}
-                {roles.includes("employee") && (
-                    <li className={`nav-item ${currentAdminMenu === "employee" ? "" : "collapsed"}`}>
-                        <a className="nav-link" href="#">
-                             <span className={`text_sidebar ${selectedType === 'qli_nv' ? 'selected' : ''}`}
-                                   onClick={() => handleToggle('qli_nv')}>Quản lý nhân viên</span>
-                        </a>
-                    </li>
-                )}
 
                 {/* Product Management */}
                 {roles.includes("product") && (
