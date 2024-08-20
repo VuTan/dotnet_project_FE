@@ -46,7 +46,7 @@ const columns = [
         sortable: true,
     },
     {
-        name: 'Danh sách sản phẩm',
+        name: 'Sản phẩm',
         selector: (row: Order) => row.product,
         wrap: true,
     },

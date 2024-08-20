@@ -1,15 +1,15 @@
 import React from 'react';
-import './CompletedOrdersStyles.scss'
+import './AllOrdersUserStyle.scss'
 import DataTable from 'react-data-table-component';
-import { Order }  from '../interfaceOrder/OrdersType';
+import {Order} from '../../AdminDonHang/interfaceOrder/OrdersType';
 // Dữ liệu giả lập
-const orders : Order[] = [
+const orders: Order[] = [
     {
         id: 1,
         time: '2024-08-01 12:30',
         product: 'Sản phẩm 1, Sản phẩm 2',
         total: 500000,
-        status: 'Đang xử lý'
+        status: 'Đã giao'
     },
     {
         id: 2,
@@ -23,14 +23,9 @@ const orders : Order[] = [
         time: '2024-08-10 10:00',
         product: 'Sản phẩm 4, Sản phẩm 5, Sản phẩm 6',
         total: 1500000,
-        status: 'Đang xử lý'
+        status: 'Đã hủy'
     },
 ];
-
-// Hàm để render button "Hoàn thành"
-const handlepCompletedOrders = (orderId: number) => {
-    console.log(`Đơn hàng ${orderId} đã được Hoàn thành`);
-};
 
 // Cấu hình các cột của bảng
 const columns = [
@@ -60,27 +55,15 @@ const columns = [
         selector: (row: Order) => row.status,
         sortable: true,
     },
-    {
-        name: 'Cập nhật',
-        cell: (row: Order) => (
-            <button
-                className="btn-CompletedOrders"
-                onClick={() => handlepCompletedOrders(row.id)}
-            >
-                Hoàn thành
-            </button>
-        ),
-    },
 ];
 
-const CompletedOrders: React.FC = () => {
+const AllOrdersUser: React.FC = () => {
     return (
-        <div className="CompletedOrders-container">
+        <div className="all-order-container">
 
             <DataTable
                 columns={columns}
                 data={orders}
-                title="Hoàn thành đơn hàng"
                 pagination
                 highlightOnHover
                 striped
@@ -89,4 +72,4 @@ const CompletedOrders: React.FC = () => {
     );
 };
 
-export default CompletedOrders;
+export default AllOrdersUser;
