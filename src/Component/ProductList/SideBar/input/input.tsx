@@ -1,5 +1,6 @@
 import React from 'react';
-import  './Input.scss'
+import './Input.scss'
+
 interface InputProps {
     classnames: string;
     name: string;
@@ -8,7 +9,7 @@ interface InputProps {
     handleChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const Input: React.FC<InputProps> = ({ classnames, name, value, title, handleChange }) => {
+const Input: React.FC<InputProps> = ({classnames, name, value, title, handleChange}) => {
     return (
         <label className={`label_sidebar ${classnames}`}>
             <input
@@ -19,7 +20,8 @@ const Input: React.FC<InputProps> = ({ classnames, name, value, title, handleCha
                 title={title}
                 onChange={handleChange}
             />
-            <span className="choose"> </span>  {title}
+            <span className="choose"> </span>
+            <div className={"title-menu"}>{title}</div>
         </label>
     );
 };
