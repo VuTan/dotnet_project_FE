@@ -1,0 +1,25 @@
+.all-order-container {
+  padding: 20px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-update, .btn-delete {
+  padding: 5px 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 14px;
+}
+
+.btn-update {
+  background-color: #E57905;
+}
+
+.btn-delete {
+  background-color: #f44336; /* Màu đỏ */
+}

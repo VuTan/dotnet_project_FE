@@ -17,6 +17,10 @@ import PackagingOrders from "../Component/AdminDonHang/packagingOrders/Packaging
 import ShippingHandovers from "../Component/AdminDonHang/shippingHandovers/ShippingHandovers";
 import CompletedOrders from "../Component/AdminDonHang/completedOrders/CompletedOrders";
 import ReturnConfirmation from "../Component/AdminDonHang/returnConfirmation/ReturnConfirmation";
+
+import AdminUserManager from "../Component/AdminNguoiDung/AdminUserManager";
+
+
 import AllOrdersUser from "../Component/UserDonHang/allOrdersUser/AllOrdersUser";
 import UserOrderManagement from "../Pages/UserOrderManagement/UserOrderManagement";
 import ShippingHandoversUser from "../Component/UserDonHang/shippingHandoversUser/ShippingHandoversUser";
@@ -24,6 +28,7 @@ import ConfirmedOrdersUser from "../Component/UserDonHang/confirmedOrdersUser/Co
 import PackagingOrdersUser from "../Component/UserDonHang/packagingOrdersUser/PackagingOrdersUser";
 import CompletedOrdersUser from "../Component/UserDonHang/completedOrdersUser/CompletedOrdersUser";
 import CancelledOrdersUser from "../Component/UserDonHang/cancelledOrdersUser/CancelledOrdersUser";
+
 const publicRoutes = [
     {path: '/', component: Home},
     {path: '/store', component: Store},
@@ -32,22 +37,28 @@ const publicRoutes = [
     {path: '/cloudfee', component: CloudfeePage},
     {path: '/products', component: ListPage},
     {path: '/products/:productId', component: DetailPage},
-    //admin
-    {path: '/admin', component: AdminPage},
+    //admin quản lý người dùng
+    {
+        path: '/admin', component: AdminPage,
+        children: [
+            {path: 'adminUserManager', component: AdminUserManager},
+        ]
+    },
 
     // admin don hang
     {
         path: '/adminOrderManagement',
         component: AdminOrderManagement,
         children: [
-            { path: 'allOrder', component: AllOrder },
-            { path: 'confirmedOrders', component: ConfirmedOrders },
-            { path: 'cancelledOrders', component: CancelledOrders },
-            { path: 'packagingOrders', component: PackagingOrders },
-            { path: 'shippingHandovers', component: ShippingHandovers },
-            { path: 'completedOrders', component: CompletedOrders },
-            { path: 'returnConfirmation', component: ReturnConfirmation },
-            { path: 'completedReturns', component: CompletedReturns },
+            {path: 'allOrder', component: AllOrder},
+            {path: 'confirmedOrders', component: ConfirmedOrders},
+            {path: 'cancelledOrders', component: CancelledOrders},
+            {path: 'packagingOrders', component: PackagingOrders},
+            {path: 'shippingHandovers', component: ShippingHandovers},
+            {path: 'completedOrders', component: CompletedOrders},
+            {path: 'returnConfirmation', component: ReturnConfirmation},
+            {path: 'completedReturns', component: CompletedReturns},
+
         ]
     },
 
