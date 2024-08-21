@@ -9,6 +9,7 @@ const AddUser: React.FC = () => {
     const initialUserState = {
         fullName: '',
         userName: '',
+        password: '',
         email: '',
         phoneNum: '',
         address: '',
@@ -68,6 +69,16 @@ const AddUser: React.FC = () => {
                         type="text"
                         name="userName"
                         value={newUser.userName}
+                        onChange={handleChange}
+                        required
+                    />
+                </div>
+                <div className="form-group">
+                    <label>Mật khẩu:</label>
+                    <input
+                        type="text"
+                        name="password"
+                        value={newUser.password}
                         onChange={handleChange}
                         required
                     />
