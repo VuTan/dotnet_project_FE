@@ -1,9 +1,10 @@
-import'./gioHang.scss';
+import './gioHang.scss';
 import React from 'react';
 import {FaPhoneAlt} from "react-icons/fa";
+
 const GioHang = () => {
     return (
-        <div className="container">
+        <div className="Container">
             <div className="head-container d-flex">
                 <h1>
                     <span>
