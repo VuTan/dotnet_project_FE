@@ -1,17 +1,18 @@
 import './ProductDiscriptionStyles.scss';
 import { Product } from "../../../utils/type";
 import dataPDetails from '../../../data/dataPDetails.json';
+import React from "react";
 
 interface ProductDiscriptionProps {
     productId: string;
 }
 
-const dataPDetailsTyped: Product[] = dataPDetails as Product[];
+const dataPDetailsTyped: Product = dataPDetails as Product;
 
 const ProductDiscription: React.FC<ProductDiscriptionProps> = ({ productId }) => {
-    const product: Product | undefined = dataPDetailsTyped.find(item => item.id === productId.toString());
+    const product: Product = dataPDetailsTyped;
 
-    if (!product) {
+    if (productId.toString() != dataPDetailsTyped.id) {
         return <div>Product not found</div>;
     }
 

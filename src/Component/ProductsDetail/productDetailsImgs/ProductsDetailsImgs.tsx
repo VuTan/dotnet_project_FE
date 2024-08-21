@@ -8,11 +8,11 @@ interface ProductsDetailsImgsProps {
     productId: string;
 }
 
-const dataPDetailsTyped: Product[] = dataPDetails as Product[];
+const dataPDetailsTyped: Product = dataPDetails as Product;
 
 const ProductsDetailsImgs: React.FC<ProductsDetailsImgsProps> = ({ productId }) => {
     // Tìm sản phẩm, nếu không tìm thấy trả về đối tượng mặc định
-    const product: Product | undefined = dataPDetailsTyped.find(item => item.id === productId.toString());
+    const product: Product = dataPDetailsTyped;
 
     // Nếu không có sản phẩm, sử dụng giá trị mặc định (images rỗng) để đảm bảo các hooks luôn được gọi
     const images = product?.imgs.length ? product.imgs : [{ source: "" }, { source: "" }, { source: "" }, { source: "" }];
@@ -40,10 +40,10 @@ const ProductsDetailsImgs: React.FC<ProductsDetailsImgsProps> = ({ productId }) 
         setCursorPosition({ x: e.pageX - left, y: e.pageY - top });
     };
 
-
-    if (!product) {
+    if (productId.toString() != dataPDetailsTyped.id) {
         return <div>Product not found</div>;
     }
+
     return (
         <div className="imgs_container">
             <div className="img_large">

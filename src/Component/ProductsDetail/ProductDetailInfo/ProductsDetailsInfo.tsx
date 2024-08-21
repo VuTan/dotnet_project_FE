@@ -11,11 +11,11 @@ interface ProductsDetailsInfoProps {
     productId: string;
 }
 
-const dataPDetailsTyped: Product[] = dataPDetails as Product[];
+const dataPDetailsTyped: Product = dataPDetails as Product;
 
 const ProductsDetailsInfo: React.FC<ProductsDetailsInfoProps> = ({ productId }) => {
     // Find the product in the list based on productId
-    const product: Product | undefined = dataPDetailsTyped.find(item => item.id === productId.toString());
+    const product: Product = dataPDetailsTyped;
 
     // Quantity
     const [quantity, setQuantity] = useState<number>(1);
@@ -45,7 +45,8 @@ const ProductsDetailsInfo: React.FC<ProductsDetailsInfoProps> = ({ productId }) 
                 : [...prev, value]
         );
     };
-    if (!product) {
+
+    if (productId.toString() != dataPDetailsTyped.id) {
         return <div>Product not found</div>;
     }
 
