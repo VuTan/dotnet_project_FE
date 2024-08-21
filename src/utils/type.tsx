@@ -31,7 +31,7 @@ export interface Product {
     id: string;
     name: string;
     category: string;
-    categogyID: number;
+    // categogyID: number;
     description: string;
     subcategories: string;
     price: number;

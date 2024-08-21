@@ -10,7 +10,8 @@ import {RootState} from "../../../redux/store";
 import {CiLogin, CiLogout} from "react-icons/ci";
 import {MdOutlineArrowDropDown} from "react-icons/md";
 import CategoryList from "../../ProductList/SideBar/ProductsTypes/CtegoryList/CategoryList";
-
+import {TypeOption} from '../../ProductList/SideBar/ProductsTypes/InterfacePTypes';
+import dataCategoryListP from '../../../data/dataCategoryListP.json';
 function NavBar() {
     const [isSticky, setIsSticky] = useState(false);
     const [showDropdown, setShowDropdown] = useState(false);
@@ -79,40 +80,7 @@ function NavBar() {
         setSelectedSubcategory(null);
     };
 
-    const typesOptions = [
-        {
-            classnames: "coffee", categogyID: "2", value: "coffee", title: "Cà Phê",
-            subcategories: ["Cà Phê Highlight", "Cà Phê Việt Nam", "Cà Phê Máy", "Cold Brew"]
-        },
-        {
-            classnames: "fruitsBlend", categogyID: "5", value: "fruitsBlend", title: "Trái Cây Xay 0°C",
-            subcategories: ["Trái Cây Xay 0°C"]
-        },
-        {
-            classnames: "teaFruits", categogyID: "4", value: "teaFruits", title: "Trà Trái Cây - HiTea",
-            subcategories: ["Trà Trái Cây", "Hi-Tea"]
-        },
-        {
-            classnames: "milkTea", categogyID: "1", value: "milkTea", title: "Trà Sữa",
-            subcategories: ["Trà Sữa"]
-        },
-        {
-            classnames: "greenTea", categogyID: "3", value: "greenTea", title: "Trà Xanh - Chocolate",
-            subcategories: ["Trà Xanh Tây Bắc", "Chocolate"]
-        },
-        {
-            classnames: "blendIceDrink", categogyID: "3", value: "blendIceDrink", title: "Thức uống đá xay",
-            subcategories: ["Đá xay Frosty"]
-        },
-        {
-            classnames: "snackCake", categogyID: "3", value: "snackCake", title: "Bánh & Snack",
-            subcategories: ["Bánh mặn", "Bánh ngọt", "Bánh Pastry"]
-        },
-        {
-            classnames: "atHome", categogyID: "3", value: "atHome", title: "Thưởng Thức Tại Nhà",
-            subcategories: ["Cà phê tại nhà"]
-        },
-    ];
+    const dataCategoryList: TypeOption[] = dataCategoryListP as TypeOption[];
 
     return (
         <div className={`navbar-wrapper ${isSticky ? 'navbar-sticky' : ''}`}>
@@ -132,7 +100,7 @@ function NavBar() {
                         {showMenuDropdown && (
                             <div className="dropdown-content">
                                 <CategoryList
-                                    typesOptions={typesOptions}
+                                    typesOptions={dataCategoryList}
                                     expandedCategory={expandedCategory}
                                     selectedCategory={selectedCategory}
                                     selectedSubcategory={selectedSubcategory}

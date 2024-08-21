@@ -4,7 +4,7 @@ import Input from "../../../../Component/ProductList/SideBar/input/input";
 
 interface PriceOption {
     classnames: string;
-    value: string;
+    id: string;
     title: string;
 }
 
@@ -16,10 +16,10 @@ const ProductPrices: React.FC<ProductPricesProps> = ({handleChange}) => {
     const [selectedPrice, setSelectedPrice] = useState<string | null>(null);
 
     const pricesOptions: PriceOption[] = [
-        {classnames: "under_30k", value: "under_30k", title: "Giá dưới 30.000đ"},
-        {classnames: "30k_50k", value: "30k_50k", title: "30.000đ - 50.000đ"},
-        {classnames: "50k_80k", value: "50k_80k", title: "50.000đ - 80.000đ"},
-        {classnames: "over_80k", value: "over_80k", title: "Giá trên 80.000đ"},
+        {classnames: "under_30k", id: "under_30k", title: "Giá dưới 30.000đ"},
+        {classnames: "30k_50k", id: "30k_50k", title: "30.000đ - 50.000đ"},
+        {classnames: "50k_80k", id: "50k_80k", title: "50.000đ - 80.000đ"},
+        {classnames: "over_80k", id: "over_80k", title: "Giá trên 80.000đ"},
     ];
 
     const handleAllTypeClick = () => {
@@ -43,14 +43,14 @@ const ProductPrices: React.FC<ProductPricesProps> = ({handleChange}) => {
 
             {pricesOptions.map((prices) => (
                 <label
-                    key={prices.value}
-                    className={`label_sidebar ${selectedPrice === prices.value ? 'selected' : ''}`}
-                    onClick={() => handleToggle(prices.value)}>
+                    key={prices.id}
+                    className={`label_sidebar ${selectedPrice === prices.id ? 'selected' : ''}`}
+                    onClick={() => handleToggle(prices.id)}>
                 <Input
-                    key={prices.value}
+                    key={prices.id}
                     classnames={prices.classnames}
                     name="pricesType"
-                    value={prices.value}
+                    id={prices.id}
                     title={prices.title}
                     handleChange={handleChange}
                 />
