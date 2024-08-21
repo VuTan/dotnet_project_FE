@@ -1,7 +1,15 @@
 // src/types.d.ts
-interface Image {
-    url: string;
-    alt: string;
+export interface ListCategory{
+    categories: Category[];
+}
+export interface Category {
+    name: string;
+    subCategory?: SubCategory[];
+}
+
+export interface SubCategory {
+    name: string;
+    products?: Product[];
 }
 
 export interface Product {
@@ -16,3 +24,7 @@ export interface Product {
     images: Image[];
 }
 
+interface Image {
+    url: string;
+    alt: string;
+}
