@@ -17,6 +17,7 @@ import PackagingOrders from "../Component/AdminDonHang/packagingOrders/Packaging
 import ShippingHandovers from "../Component/AdminDonHang/shippingHandovers/ShippingHandovers";
 import CompletedOrders from "../Component/AdminDonHang/completedOrders/CompletedOrders";
 import ReturnConfirmation from "../Component/AdminDonHang/returnConfirmation/ReturnConfirmation";
+import gioHang from "../Component/gioHang/GioHang";
 const publicRoutes = [
     {path: '/', component: Home},
     {path: '/store', component: Store},
@@ -25,6 +26,7 @@ const publicRoutes = [
     {path: '/cloudfee', component: CloudfeePage},
     {path: '/products', component: ListPage},
     {path: '/products/:productId', component: DetailPage},
+    {path: '/cart', component: gioHang},
     //admin
     {path: '/admin', component: AdminPage},
 
