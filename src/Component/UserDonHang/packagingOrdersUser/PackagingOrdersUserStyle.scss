@@ -47,4 +47,22 @@
     padding: 10px;
     border-top: 1px solid #ddd;
   }
+  .btn-cancel {
+    background-color: #E57905;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    margin: 4px 2px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .btn-cancel:hover {
+    background-color: #e8973f;
+  }
 }
