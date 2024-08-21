@@ -1,58 +1,64 @@
-*{
+* {
   padding: 0;
-  margin: 0;
-  box-sizing: border-box;
 }
-.container{
-  font-size: 18px;
-  padding: 0 15px;
-  margin-top: 26px;
-}
-.head-container{
+
+
+.head-container {
   justify-content: center;
   margin-bottom: 50px;
 }
-.d-flex{
+
+.d-flex {
   display: flex;
 }
-.justify-content-between{
+
+.justify-content-between {
   justify-content: space-between;
 }
-.conten-container{
+
+.conten-container {
   display: flex;
 }
-.diachi{
+
+.diachi {
   padding-left: 20px;
 }
-.form-group{
+
+.form-group {
   margin-bottom: 20px;
 }
-.input-name{
+
+.input-name {
   width: 500px;
   height: 48px;
   padding: 11px 23px;
 }
-.p-dpt{
+
+.p-dpt {
   padding: 7px 12px;
   border: 1px solid black;
   border-radius: 20px;
 }
-.tch-check-box-tile{
+
+.tch-check-box-tile {
   background: #fa8c16;
   height: 3px;
   width: 80px;
   margin-top: 20px;
 }
-.conten-left{
+
+.conten-left {
   display: flex;
   padding: 16px 0px;
 }
-.chevron-right{
+
+.chevron-right {
   align-items: center;
   margin-left: 30px;
   font-size: 30px;
 }
-.giohang-right{
+
+.giohang-right {
   position: relative;
   left: 280px;
   border-radius: 8px;
@@ -61,33 +67,42 @@
   padding-bottom: 0px;
   width: 500px;
 }
-.donHang{
+
+.donHang {
   padding: 12px 0px;
 }
-.edit{
+
+.edit {
   align-items: center;
 }
-.pdb-8px{
+
+.pdb-8px {
   padding-bottom: 8px;
 }
-.fa-trash{
+
+.fa-trash {
   color: #fa8c16;
   font-size: 20px;
 }
-.fa-pen{
+
+.fa-pen {
   color: #fa8c16;
   font-size: 20px;
 }
-.price{
+
+.price {
   align-items: center;
 }
-.tongCong{
+
+.tongCong {
   padding: 16px 0 30px 0;
 }
-.freeShip{
+
+.freeShip {
   text-decoration: line-through;
 }
-.footer-donHang{
+
+.footer-donHang {
   position: relative;
   right: 20px;
   width: 500px;
@@ -98,26 +113,31 @@
   padding: 16px 20px;
   align-items: center;
 }
-.bt-datHang{
+
+.bt-datHang {
   color: #fa8c16;
   background-color: white;
   width: 128px;
   height: 52px;
   border-radius: 30px;
 }
-.bold-700{
+
+.bold-700 {
   font-weight: 700;
 }
-.ptth_gioHang{
+
+.ptth_gioHang {
   margin-top: 24px;
   padding-left: 60px;
   list-style-type: none;
 }
-.pttt{
+
+.pttt {
   position: relative;
   bottom: 150px;
 }
-.custom-control-input{
+
+.custom-control-input {
   width: 24px;
   height: 24px;
   margin-right: 30px;
@@ -125,15 +145,18 @@
   top: 6px;
   left: 8px;
 }
-.img_pttt{
+
+.img_pttt {
   width: 60px;
   height: 60px;
   margin-right: 12px;
 }
-.custom-control{
+
+.custom-control {
   margin: 8px 0px 8px 0px;
 }
-.checkbox-button__input{
+
+.checkbox-button__input {
   width: 24px;
   height: 24px;
   margin-right: 8px;

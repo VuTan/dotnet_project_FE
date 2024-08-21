@@ -43,6 +43,7 @@ const publicRoutes = [
     {path: '/products/:productId', component: DetailPage},
     {path: '/profile', component: Profile},
     {path: '/cart', component: gioHang},
+    {path: '/menu', component: ListPage},
     //admin quản lý người dùng
     {
         path: '/admin', component: AdminPage,
