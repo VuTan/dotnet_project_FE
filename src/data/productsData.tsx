@@ -1,7 +1,25 @@
 // Define the interface for Image
-import {Product} from "../../src/utils/type";
+// import {Product} from "../../src/utils/type";
 
 // Define the productsData array with the Product[] type
+
+interface Image {
+    url: string;
+    alt: string;
+}
+
+ interface Product {
+    id: string;
+    name: string;
+    category: string;
+    categogyID: number;
+    descript: string;
+    title: string;
+    subcategories: string;
+    price: number;
+    images: Image[];
+}
+
 const productsData: Product[] = [
     {
         id: "111",

@@ -1,0 +1,164 @@
+.all-order-container {
+  padding: 20px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-update, .btn-delete {
+  padding: 5px 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 14px;
+}
+
+.btn-update {
+  background-color: #E57905;
+}
+
+.btn-delete {
+  background-color: #f44336; /* Màu đỏ */
+}
+
+form {
+  border: 1px solid #bdbaba;
+  padding: 40px 100px;
+
+  label {
+    color: #E57905;
+    font-size: medium;
+
+  }
+}
+
+.all-order-container {
+  .form-container {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 16px;
+  }
+
+  form {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 16px;
+  }
+
+  .form-group {
+    display: contents;
+  }
+
+  label {
+    font-weight: bold;
+    align-self: center;
+  }
+
+  input, select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .radio-group {
+    display: flex;
+    gap: 16px;
+
+    label {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+  }
+}
+
+.all-order-container {
+  .form-container {
+    gap: 16px;
+  }
+
+  form {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 16px;
+  }
+
+  .form-group {
+    display: contents;
+    margin-bottom: 16px;
+  }
+
+  label {
+    font-weight: bold;
+    align-self: center;
+  }
+
+  input, select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  .radio-group {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+
+    label {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      color: #6c6c6c;
+      font-weight: normal;
+    }
+  }
+}
+
+.form-actions {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+  margin-left: 250%;
+  width: 200%;
+}
+
+.btn {
+  padding: 5px 10px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+
+}
+
+.btn-primary {
+  background-color: #E57905;
+
+  &:hover {
+    background-color: #a95904
+  }
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+
+  &:hover {
+    background-color: #4b4d4f;
+  }
+}
+
+.addUser {
+  padding: 10px 10px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: #E57905;
+}

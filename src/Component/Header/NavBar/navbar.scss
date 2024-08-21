@@ -104,6 +104,7 @@
 
 .logout-button:hover {
   background-color: #e0e0e0;
+  color: #c06518;
 }
 
 .logout-icon {
@@ -161,4 +162,136 @@
 
 .navbar-sticky .user-icon {
   color: #262626;
+}
+
+.menu-item-with-dropdown {
+  position: relative;
+  padding-bottom: 20px;
+  margin-top: 20px;
+
+  .dropdown-content {
+    display: flex;
+    flex-direction: row; /* Layout theo chiều ngang */
+    overflow-x: auto; /* Cuộn ngang nếu cần */
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    position: absolute; /* Vị trí tuyệt đối */
+    left: 0; /* Căn trái với phần tử chứa */
+    z-index: 1000; /* Đảm bảo nằm trên các phần tử khác */
+    margin-left: -665%;
+    width: 1800%;
+    margin-top: 25%;
+    padding-top: 60%;
+
+    span {
+      color: rgba(26, 27, 28, 0.25);
+      background-color: unset;
+    }
+
+    .card-menu {
+      width: 30%;
+
+      .label_sidebar {
+        font-size: medium;
+
+        input {
+          appearance: auto !important;
+        }
+
+        &:hover {
+          color: var(--secondary-color);
+        }
+
+        .title-menu {
+          border-bottom: 2px solid black;
+          font-size: medium;
+
+          &:hover {
+            color: var(--secondary-color);
+          }
+
+        }
+
+      }
+    }
+  }
+
+  .category-list {
+    display: flex;
+    flex-direction: row; /* Ensure categories are aligned horizontally */
+    gap: 20px; /* Space between categories */
+
+    .title-menu {
+      border-bottom: 2px solid black;
+      font-size: medium;
+
+      &:hover {
+        color: var(--secondary-color);
+      }
+    }
+
+    ul {
+      list-style-type: none;
+      padding-left: 20%;
+      align-items: center;
+    }
+
+    li {
+      color: #5b5a5a;
+      margin-bottom: 10%;
+      cursor: pointer;
+
+      &:hover {
+        color: var(--secondary-color);
+      }
+    }
+
+  }
+
+  .category-item {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 2px solid transparent;
+
+    //&:hover {
+    //  border-bottom-color: #000; /* Underline effect on hover */
+    //}
+
+    //&.selected {
+    //  border-bottom-color: #000; /* Highlight selected category */
+    //  font-weight: bold;
+    //}
+  }
+
+  .subcategory-list {
+    display: none; /* Hide by default */
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  .subcategory-list.show {
+    display: flex; /* Show when expanded */
+  }
+
+  .subcategory-item {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    text-align: center;
+
+    &:hover {
+      background-color: #f0f0f0; /* Hover effect */
+    }
+
+    &.selected {
+      background-color: #e0e0e0; /* Highlight selected subcategory */
+      font-weight: bold;
+    }
+  }
 }

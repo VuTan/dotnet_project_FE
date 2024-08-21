@@ -6,7 +6,7 @@ const routes = {
     store: '/store',
     login: '/login',
     signup: '/signup',
-    logout: '/logout'
+    logout: '/logout',
 
 };
 

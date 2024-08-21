@@ -1,0 +1,11 @@
+.user-OrderPage {
+  font-family: 'SF Pro Text', sans-serif;
+  display: grid;
+  grid-template-rows: 0.5fr 2fr;
+  background-color: #FFF7E6;
+  .UserOrder_sidebar {
+    width: 100%;
+  }
+  .mainOrder-content {
+  }
+}
