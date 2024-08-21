@@ -1,0 +1,65 @@
+[
+  {
+    "id": "coffee",
+    "title": "Cà Phê",
+    "subcategories": [
+      { "id": "highlight", "name": "Cà Phê Highlight" },
+      { "id": "vietnam", "name": "Cà Phê Việt Nam" },
+      { "id": "machine", "name": "Cà Phê Máy" },
+      { "id": "coldBrew", "name": "Cold Brew" }
+    ]
+  },
+  {
+    "id": "fruitsBlend",
+    "title": "Trái Cây Xay 0°C",
+    "subcategories": [
+      { "id": "blend", "name": "Trái Cây Xay 0°C" }
+    ]
+  },
+  {
+    "id": "teaFruits",
+    "title": "Trà Trái Cây - HiTea",
+    "subcategories": [
+      { "id": "fruitTea", "name": "Trà Trái Cây" },
+      { "id": "hiTea", "name": "Hi-Tea" }
+    ]
+  },
+  {
+    "id": "milkTea",
+    "title": "Trà Sữa",
+    "subcategories": [
+      { "id": "milkTea", "name": "Trà Sữa" }
+    ]
+  },
+  {
+    "id": "greenTea",
+    "title": "Trà Xanh - Chocolate",
+    "subcategories": [
+      { "id": "northGreen", "name": "Trà Xanh Tây Bắc" },
+      { "id": "chocolate", "name": "Chocolate" }
+    ]
+  },
+  {
+    "id": "blendIceDrink",
+    "title": "Thức uống đá xay",
+    "subcategories": [
+      { "id": "frosty", "name": "Đá xay Frosty" }
+    ]
+  },
+  {
+    "id": "snackCake",
+    "title": "Bánh & Snack",
+    "subcategories": [
+      { "id": "savoryCake", "name": "Bánh mặn" },
+      { "id": "sweetCake", "name": "Bánh ngọt" },
+      { "id": "pastry", "name": "Bánh Pastry" }
+    ]
+  },
+  {
+    "id": "atHome",
+    "title": "Thưởng Thức Tại Nhà",
+    "subcategories": [
+      { "id": "homeCoffee", "name": "Cà phê tại nhà" }
+    ]
+  }
+]
