@@ -1,0 +1,67 @@
+[
+
+{
+  "id": "555",
+  "description": "Americano được pha chế bằng cách pha thêm nước với tỷ lệ nhất định vào tách cà phê Espresso, từ đó mang lại hương vị nhẹ nhàng và giữ trọn được mùi hương cà phê đặc trưng.",
+  "imgs": [
+    {
+      "source": "https://product.hstatic.net/1000075078/product/1636647328_arme-nong_3c118e3822444aadb7f0e1a162d5264a.jpg"
+    },
+    {
+      "source": "https://product.hstatic.net/1000075078/product/1645968775_americano-copy_bb5a408f247646f0935eb17932a6d0d0.png"
+    },
+    {
+      "source": "https://product.hstatic.net/1000075078/product/1645968776_americano-nong-lifestyle_76ac71d068d84ba7a6dfd7732a45c560.jpg"
+    },
+    {
+      "source": "https://product.hstatic.net/1000075078/product/1645968775_americano-copy_bb5a408f247646f0935eb17932a6d0d0.png"
+    }
+  ],
+  "sizes": [
+    {
+      "value": "small",
+      "name": "Nhỏ",
+      "price": 0
+    },
+    {
+      "value": "big",
+      "name": "Lớn",
+      "price": 16000
+    },
+    {
+      "value": "normal",
+      "name": "Vừa",
+      "price": 10000
+    }
+  ],
+  "toppings": [
+    {
+      "value": "espresso",
+      "name": "Shot Espresso",
+      "price": 10000
+    },
+    {
+      "value": "tranchau",
+      "name": "Trân châu trắng",
+      "price": 10000
+    },
+    {
+      "value": "caramel",
+      "name": "Sốt Caramel",
+      "price": 10000
+    },
+    {
+      "value": "dao",
+      "name": "Đào Miếng",
+      "price": 10000
+    },
+    {
+      "value": "vai",
+      "name": "Trái Vải",
+      "price": 10000
+    }
+  ],
+  "name": "Americano Nóng",
+  "price": 45000
+}
+]

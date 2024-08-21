@@ -2,7 +2,23 @@ import React from 'react';
 import {Box, Container, Grid} from '@mui/material';
 import productsData from '../../../../data/productsData';
 import ProductItem from '../../../../Component/ProductList/ProductItem/ProductItem';
-import {Product} from "../../../../utils/type";
+// import {Product} from "../../../../utils/type";
+
+interface Image {
+    url: string;
+    alt: string;
+}
+interface Product {
+    id: string;
+    name: string;
+    category: string;
+    categogyID: number;
+    descript: string;
+    title: string;
+    subcategories: string;
+    price: number;
+    images: Image[];
+}
 
 const Content2: React.FC = () => {
     // Group products by categogyID

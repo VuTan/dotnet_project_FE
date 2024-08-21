@@ -1,29 +1,28 @@
 import React, { useState } from 'react';
-import productsData from "../../../data/productsData";
+// import productsData from "../../../data/productsData";
 import './ProductsDetailsImgsStyles.scss';
-
-interface Product {
-    id: string;
-    images: { url: string }[];
-}
+import dataPDetails from '../../../data/dataPDetails.json';
+import { Product } from "../../../utils/type";
 
 interface ProductsDetailsImgsProps {
     productId: string;
 }
 
+const dataPDetailsTyped: Product[] = dataPDetails as Product[];
+
 const ProductsDetailsImgs: React.FC<ProductsDetailsImgsProps> = ({ productId }) => {
     // Tìm sản phẩm, nếu không tìm thấy trả về đối tượng mặc định
-    const product: Product | undefined = productsData.find(item => item.id === productId.toString());
+    const product: Product | undefined = dataPDetailsTyped.find(item => item.id === productId.toString());
 
     // Nếu không có sản phẩm, sử dụng giá trị mặc định (images rỗng) để đảm bảo các hooks luôn được gọi
-    const images = product ? product.images : [{ url: "" }, { url: "" }, { url: "" }, { url: "" }];
+    const images = product?.imgs.length ? product.imgs : [{ source: "" }, { source: "" }, { source: "" }, { source: "" }];
 
     // Gọi các hooks bên ngoài mọi điều kiện
     const [image, setImage] = useState({
-        img1: images[0].url,
-        img2: images[1].url,
-        img3: images[2].url,
-        img4: images[3].url,
+        img1: images[0].source,
+        img2: images[1].source,
+        img3: images[2].source,
+        img4: images[3].source,
     });
 
     const [activeImg, setActiveImg] = useState(image.img1);
@@ -41,11 +40,10 @@ const ProductsDetailsImgs: React.FC<ProductsDetailsImgsProps> = ({ productId }) 
         setCursorPosition({ x: e.pageX - left, y: e.pageY - top });
     };
 
-    // Render nội dung dựa trên việc có sản phẩm hay không
+
     if (!product) {
         return <div>Product not found</div>;
     }
-
     return (
         <div className="imgs_container">
             <div className="img_large">
@@ -77,18 +75,11 @@ const ProductsDetailsImgs: React.FC<ProductsDetailsImgsProps> = ({ productId }) 
             </div>
 
             <div className="list_imgs">
-                <div className="img1">
-                    <img className="imglist" src={image.img1} alt="" onClick={() => setActiveImg(image.img1)} />
-                </div>
-                <div className="img2">
-                    <img className="imglist" src={image.img2} alt="" onClick={() => setActiveImg(image.img2)} />
-                </div>
-                <div className="img3">
-                    <img className="imglist" src={image.img3} alt="" onClick={() => setActiveImg(image.img3)} />
-                </div>
-                <div className="img4">
-                    <img className="imglist" src={image.img4} alt="" onClick={() => setActiveImg(image.img4)} />
-                </div>
+                {images.map((img, index) => (
+                    <div key={index} className={`img${index + 1}`}>
+                        <img className="imglist" src={img.source} alt={`Thumbnail ${index + 1}`} onClick={() => setActiveImg(img.source)} />
+                    </div>
+                ))}
             </div>
         </div>
     );

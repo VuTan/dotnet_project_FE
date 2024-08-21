@@ -38,7 +38,7 @@ const DetailPage: React.FC = () => {
 
                 <div className="card2_container">
                     <h2 className="Label_sameTypes">Có thể bạn sẽ thích</h2>
-                    <SliderCards />
+                    {/*<SliderCards />*/}
                 </div>
             </div>
         </div>

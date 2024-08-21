@@ -1,0 +1,125 @@
+[
+  {
+    "products": [
+      {
+        "id": "55",
+        "name": "Americano Nóng",
+        "price": 45000,
+        "imgMain": "https://product.hstatic.net/1000075078/product/1636647328_arme-nong_3c118e3822444aadb7f0e1a162d5264a.jpg"
+      },
+      {
+        "id": "56",
+        "name": "Americano Đá",
+        "price": 45000,
+        "imgMain": "https://product.hstatic.net/1000075078/product/classic-cold-brew_791256_d4d8388a3d724f879845680c0239ff68.jpg"
+      },
+      {
+        "id": "57",
+        "name": "Latte Nóng",
+        "price": 55000,
+        "imgMain": "https://product.hstatic.net/1000075078/product/latte_851143_377d5e11c1e145a8bf5f82a64047e60d.jpg"
+      },
+      {
+        "id": "58",
+        "name": "Latte Đá",
+        "price": 55000,
+        "imgMain": "https://product.hstatic.net/1000075078/product/latte-da_438410_ff2be8d76067434385f8e27b33fed780.jpg"
+      },
+      {
+        "id": "59",
+        "name": "Caramel Macchiato Nóng",
+        "price": 55000,
+        "imgMain": "https://product.hstatic.net/1000075078/product/caramelmacchiatonong_168039_9a4c155f15294771b9c300b0230c6a88.jpg"
+      },
+      {
+        "id": "60",
+        "name": "Caramel Macchiato Đá",
+        "price": 55000,
+        "imgMain": "https://product.hstatic.net/1000075078/product/caramel-macchiato_143623_0e070a39d0e54e808db4d91049430b51.jpg"
+      },
+      {
+        "id": "61",
+        "name": "Đường Đen Marble Latte",
+        "price": 55000,
+        "imgMain": "https://product.hstatic.net/1000075078/product/1686716537_dd-latte_785591205184481597a2a79b9331e03b.jpg"
+      }
+    ],
+    "nameSubCate": "Cà Phê Máy"
+  },
+  {
+    "products": [
+      {
+        "id": "62",
+        "name": "Cà Phê Đen Nóng",
+        "price": 39000,
+        "imgMain": "https://product.hstatic.net/1000075078/product/1639377816_ca-phe-den-nong_2e0cb9233846467fbdcb76e99d2b7cac.jpg"
+      },
+      {
+        "id": "63",
+        "name": "Cà Phê Đen Đá",
+        "price": 29000,
+        "imgMain": "https://product.hstatic.net/1000075078/product/1639377797_ca-phe-den-da_6f4766ec0f8b4e929a8d916ae3c13254.jpg"
+      },
+      {
+        "id": "64",
+        "name": "Bạc Sỉu Nóng",
+        "price": 39000,
+        "imgMain": "https://product.hstatic.net/1000075078/product/1639377926_bacsiunong_51fd4560c6b74a249176abc43f8f0ad6.jpg"
+      },
+      {
+        "id": "65",
+        "name": "Bạc Sỉu",
+        "price": 29000,
+        "imgMain": "https://product.hstatic.net/1000075078/product/1639377904_bac-siu_525b9fa5055b41f183088c8e479a9472.jpg"
+      },
+      {
+        "id": "66",
+        "name": "Cà Phê Sữa Nóng",
+        "price": 39000,
+        "imgMain": "https://product.hstatic.net/1000075078/product/1639377770_cfsua-nong_9a47f58888e7444a9979e0d117d49ad3.jpg"
+      },
+      {
+        "id": "67",
+        "name": "Cà Phê Sữa Đá",
+        "price": 29000,
+        "imgMain": "https://product.hstatic.net/1000075078/product/1669736835_ca-phe-sua-da_e6168b6a38ec45d2b4854d2708b5d542.png"
+      },
+      {
+        "id": "68",
+        "name": "The Coffee House Sữa Đá",
+        "price": 39000,
+        "imgMain": "https://product.hstatic.net/1000075078/product/1675355354_bg-tch-sua-da-no_4fbf208885ed464ab4b5e145336d42a2.jpg"
+      },
+      {
+        "id": "69",
+        "name": "Đường Đen Sữa Đá",
+        "price": 45000,
+        "imgMain": "https://product.hstatic.net/1000075078/product/1686716532_dd-suada_c180c6187e644babbac7019a2070231e.jpg"
+      },
+      {
+        "id": "70",
+        "name": "Bơ Arabica",
+        "price": 49000,
+        "imgMain": "https://product.hstatic.net/1000075078/product/1723623452_bo-arabica_cec78acea18d48f1aa625e0464332dcd.jpg"
+      }
+    ],
+    "nameSubCate": "Cà Phê Việt Nam"
+  },
+  {
+    "products": [
+      {
+        "id": "53",
+        "name": "Cold Brew Truyền Thống",
+        "price": 45000,
+        "imgMain": "https://product.hstatic.net/1000075078/product/classic-cold-brew_239501_31d6bfe69bc04714a437cff0fe0317ab.jpg"
+      },
+      {
+        "id": "54",
+        "name": "Cold Brew Sữa Tươi",
+        "price": 49000,
+        "imgMain": "https://product.hstatic.net/1000075078/product/cold-brew-sua-tuoi_379576_990956a1473e4ded82c8f76b877b7d15.jpg"
+      }
+    ],
+    "nameSubCate": "Cold Brew"
+  }
+]
