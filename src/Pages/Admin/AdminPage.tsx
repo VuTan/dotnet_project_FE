@@ -1,10 +1,13 @@
 import React from 'react';
 import './AdminPageStyles.scss';
 import AdminSideBar from '../../Component/AdminSideBar/AdminSideBar';
-import { Outlet, useLocation } from 'react-router-dom';
+
+import {Outlet, useLocation} from 'react-router-dom';
+
 const AdminPage: React.FC = () => {
-    // Thông tin giả lập về roles và currentAdminMenu
-    const roles = "dashboard,customer,employee,product,order,log";
+    // Thông tin giả lập về roles và currentAdminMenu, có thể thay thế bằng dữ liệu thực tế
+    const roles = "dashboard,user,product,order,log";
+
     const currentAdminMenu = "dashboard";
     const location = useLocation(); // Lấy đường dẫn hiện tại
 
@@ -14,15 +17,15 @@ const AdminPage: React.FC = () => {
         <div className="admin-page">
             {/* Sidebar */}
             <div className="admin_sidebar">
-                <AdminSideBar roles={roles} currentAdminMenu={currentAdminMenu} />
+                <AdminSideBar roles={roles} currentAdminMenu={currentAdminMenu}/>
             </div>
 
 
             {/* Nội dung chính của trang */}
             <div className="main-content">
-                <h1>Welcome to the Admin</h1>
-{/*<Outlet/>*/}
-                {shouldRenderOutlet && <Outlet />}
+
+                {shouldRenderOutlet && <Outlet/>}
+
             </div>
         </div>
     );
