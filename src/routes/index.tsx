@@ -30,6 +30,7 @@ import CompletedOrdersUser from "../Component/UserDonHang/completedOrdersUser/Co
 import CancelledOrdersUser from "../Component/UserDonHang/cancelledOrdersUser/CancelledOrdersUser";
 import UserDetailManager from "../Component/AdminNguoiDung/UserDetailManager/UserDetailManager";
 import AddUser from "../Component/AdminNguoiDung/AddUser/AddUser";
+import Profile from "../Page/Profile/Profile";
 
 const publicRoutes = [
     {path: '/', component: Home},
@@ -39,6 +40,8 @@ const publicRoutes = [
     {path: '/cloudfee', component: CloudfeePage},
     {path: '/products', component: ListPage},
     {path: '/products/:productId', component: DetailPage},
+    {path: '/profile', component: Profile},
+    {path: '/menu', component: ListPage},
 
     //admin quản lý người dùng
     {

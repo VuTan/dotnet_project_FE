@@ -166,18 +166,22 @@ function NavBar() {
                     <div className="dropdown-menu">
                         {user ? (
                             <button className="logout-button" onClick={() => handleClick(config.routes.logout)}>
-                                LogOut
+                                Logout
                                 <CiLogout className="logout-icon"/>
                             </button>
                         ) : (
-                            <Link to="/login">
+                            <Link to={config.routes.login}>
                                 <button className="logout-button">
                                     Login
                                     <CiLogin className="logout-icon"/>
                                 </button>
                             </Link>
                         )}
-                        <button className={"logout-button"}>Profile</button>
+                        <Link to={config.routes.profile}>
+                            <button className="logout-button">
+                                Profile
+                            </button>
+                        </Link>
                     </div>
 
 
