@@ -1,65 +1,66 @@
 import React, {useState} from 'react';
+import {useNavigate} from 'react-router-dom'; // Import hook useNavigate
 import '../AdminUserManager.scss';
 
-const UserDetailManager: React.FC = () => {
-    // Thông tin người dùng cố định
+const AddUser: React.FC = () => {
+    const navigate = useNavigate(); // Khai báo useNavigate
+
+    // Trạng thái cho thông tin người dùng
     const initialUserState = {
-        id: 1,
-        fullName: "Huỳnh Thị Mai Phương",
-        userName: "Phương",
-        email: "26@gmail.com",
-        phoneNumber: '0898388564',
-        address: "Đăk Nông",
-        yearOfBirth: new Date('2003-03-13'),
-        sex: "Nữ",
-        role: "Khách hàng"
+        fullName: '',
+        userName: '',
+        password: '',
+        email: '',
+        phoneNum: '',
+        address: '',
+        yearOfBirth: '',
+        sex: '',
+        role: 'Khách hàng'
     };
 
-    const [user, setUser] = useState(initialUserState);
-
-    // Chuyển đổi giá trị ngày từ chuỗi thành đối tượng Date
+    const [newUser, setNewUser] = useState(initialUserState);
+    // Xử lý thay đổi giá trị trường input
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
         const {name, value, type} = e.target;
         if (type === 'date' && name === 'yearOfBirth') {
-            setUser(prevUser => ({
+            setNewUser(prevUser => ({
                 ...prevUser,
-                [name]: new Date(value)
+                [name]: value
             }));
         } else {
-            setUser(prevUser => ({
+            setNewUser(prevUser => ({
                 ...prevUser,
                 [name]: value
             }));
         }
     };
 
-    const handleUpdate = (e: React.FormEvent) => {
+    // Xử lý gửi form
+    const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        console.log('Cập nhật người dùng:', user);
-        // Xử lý cập nhật người dùng ở đây
+        console.log('Thông tin người dùng mới:', newUser);
+        navigate('/admin/adminUserManager');
     };
 
+    // Xử lý hủy
     const handleCancel = () => {
-        setUser(initialUserState);
+        setNewUser(initialUserState);
     };
 
     return (
         <div className="all-order-container">
             <div className="sc-epPVmt bvRKJa rdt_TableHeader">
-                <div className="sc-fpSrms bRougq">Cập nhật thông tin người dùng</div>
+                <div className="sc-fpSrms bRougq">Thêm người dùng mới</div>
             </div>
-            <form className="form-container" onSubmit={handleUpdate}>
-                <div className="form-group">
-                    <label>ID:</label>
-                    <input type="text" value={user.id} readOnly/>
-                </div>
+            <form className="add-user-form" onSubmit={handleSubmit}>
                 <div className="form-group">
                     <label>Họ và Tên:</label>
                     <input
                         type="text"
                         name="fullName"
-                        value={user.fullName}
+                        value={newUser.fullName}
                         onChange={handleChange}
+                        required
                     />
                 </div>
                 <div className="form-group">
@@ -67,8 +68,19 @@ const UserDetailManager: React.FC = () => {
                     <input
                         type="text"
                         name="userName"
-                        value={user.userName}
+                        value={newUser.userName}
                         onChange={handleChange}
+                        required
+                    />
+                </div>
+                <div className="form-group">
+                    <label>Mật khẩu:</label>
+                    <input
+                        type="text"
+                        name="password"
+                        value={newUser.password}
+                        onChange={handleChange}
+                        required
                     />
                 </div>
                 <div className="form-group">
@@ -76,8 +88,9 @@ const UserDetailManager: React.FC = () => {
                     <input
                         type="email"
                         name="email"
-                        value={user.email}
+                        value={newUser.email}
                         onChange={handleChange}
+                        required
                     />
                 </div>
                 <div className="form-group">
@@ -85,8 +98,9 @@ const UserDetailManager: React.FC = () => {
                     <input
                         type="text"
                         name="phoneNum"
-                        value={user.phoneNumber}
+                        value={newUser.phoneNum}
                         onChange={handleChange}
+                        required
                     />
                 </div>
                 <div className="form-group">
@@ -94,8 +108,9 @@ const UserDetailManager: React.FC = () => {
                     <input
                         type="text"
                         name="address"
-                        value={user.address}
+                        value={newUser.address}
                         onChange={handleChange}
+                        required
                     />
                 </div>
                 <div className="form-group">
@@ -103,8 +118,9 @@ const UserDetailManager: React.FC = () => {
                     <input
                         type="date"
                         name="yearOfBirth"
-                        value={user.yearOfBirth.toISOString().split('T')[0]}
+                        value={newUser.yearOfBirth}
                         onChange={handleChange}
+                        required
                     />
                 </div>
                 <div className="form-group">
@@ -115,7 +131,7 @@ const UserDetailManager: React.FC = () => {
                                 type="radio"
                                 name="sex"
                                 value="Nam"
-                                checked={user.sex === 'Nam'}
+                                checked={newUser.sex === 'Nam'}
                                 onChange={handleChange}
                             />
                             Nam
@@ -125,7 +141,7 @@ const UserDetailManager: React.FC = () => {
                                 type="radio"
                                 name="sex"
                                 value="Nữ"
-                                checked={user.sex === 'Nữ'}
+                                checked={newUser.sex === 'Nữ'}
                                 onChange={handleChange}
                             />
                             Nữ
@@ -136,7 +152,7 @@ const UserDetailManager: React.FC = () => {
                     <label>Chức vụ:</label>
                     <select
                         name="role"
-                        value={user.role}
+                        value={newUser.role}
                         onChange={handleChange}
                     >
                         <option value="Khách hàng">Khách hàng</option>
@@ -145,7 +161,7 @@ const UserDetailManager: React.FC = () => {
                     </select>
                 </div>
                 <div className="form-actions">
-                    <button type="submit" className="btn btn-primary">Cập nhật</button>
+                    <button type="submit" className="btn btn-primary">Thêm</button>
                     <button type="button" className="btn btn-secondary" onClick={handleCancel}>Hủy</button>
                 </div>
             </form>
@@ -153,4 +169,4 @@ const UserDetailManager: React.FC = () => {
     );
 };
 
-export default UserDetailManager;
+export default AddUser;

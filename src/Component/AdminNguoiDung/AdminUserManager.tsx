@@ -50,7 +50,9 @@ const AdminUserManager: React.FC = () => {
     const handleUpdate = (id: number) => {
         navigate(`/admin/user/${id}`);
     };
-
+    const handleAddUser = () => {
+        navigate('/admin/addUser');
+    };
     const columns = [
         {
             name: 'ID',
@@ -114,6 +116,8 @@ const AdminUserManager: React.FC = () => {
 
     return (
         <div className="all-order-container">
+
+            <button className={"addUser"} onClick={handleAddUser}>Thêm người dùng</button>
             <DataTable
                 columns={columns}
                 data={users}
