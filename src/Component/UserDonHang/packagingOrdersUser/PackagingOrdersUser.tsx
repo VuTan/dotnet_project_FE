@@ -2,6 +2,8 @@ import React from 'react';
 import './PackagingOrdersUserStyle.scss'
 import DataTable from 'react-data-table-component';
 import {Order} from '../../AdminDonHang/interfaceOrder/OrdersType';
+
+
 // Dữ liệu giả lập
 const orders: Order[] = [
     {
@@ -26,6 +28,9 @@ const orders: Order[] = [
         status: 'đang chuẩn bị'
     },
 ];
+const handlecancel = (orderId: number) => {
+    console.log(`Đơn hàng ${orderId} huy`);
+};
 
 // Cấu hình các cột của bảng
 const columns = [
@@ -54,6 +59,17 @@ const columns = [
         name: 'Tình trạng',
         selector: (row: Order) => row.status,
         sortable: true,
+    },
+    {
+        name: 'Cập nhật',
+        cell: (row: Order) => (
+            <button
+                className="btn-cancel"
+                onClick={() => handlecancel(row.id)}
+            >
+                Hủy đơn
+            </button>
+        ),
     },
 ];
 

@@ -11,7 +11,7 @@ export interface Category {
 export interface SubCategory {
     name: string;
     products?: Product[];
-
+}
 interface Image {
     source: string;
 }
@@ -41,7 +41,7 @@ export interface Product {
     imgMain: string;
 }
 
-interface Image {
-    url: string;
-    alt: string;
-}
+// interface Image {
+//     url: string;
+//     alt: string;
+// }
