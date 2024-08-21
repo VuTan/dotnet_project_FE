@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {useNavigate} from 'react-router-dom'; // Thêm hook useNavigate
 import DataTable from "react-data-table-component";
 import './AdminUserManager.scss'
 
@@ -10,6 +11,7 @@ interface User {
     address: string;
     yearOfBirth: Date;
     sex: string;
+    role: string;
 }
 
 // Dữ liệu người dùng
@@ -21,7 +23,8 @@ const initialUsers: User[] = [
         email: "26@gmail.com",
         address: "Đăk Nông",
         yearOfBirth: new Date('2003-03-13'),
-        sex: "Nữ"
+        sex: "Nữ",
+        role: "Khách hàng"
     },
     {
         id: 2,
@@ -30,22 +33,22 @@ const initialUsers: User[] = [
         email: "26@gmail.com",
         address: "Đăk Nông",
         yearOfBirth: new Date('2003-03-13'),
-        sex: "Nữ"
+        sex: "Nữ",
+        role: "Nhân viên"
     },
 ];
 
-// Hàm xử lý cập nhật người dùng
-const handleUpdate = (id: number) => {
-    console.log(`Cập nhật người dùng với ID: ${id}`);
-};
-
-// Hàm xử lý xóa người dùng
 const AdminUserManager: React.FC = () => {
     const [users, setUsers] = useState<User[]>(initialUsers);
+    const navigate = useNavigate(); // Khai báo useNavigate
 
     const handleDelete = (id: number) => {
         const updatedUsers = users.filter(user => user.id !== id);
         setUsers(updatedUsers);
+    };
+
+    const handleUpdate = (id: number) => {
+        navigate(`/admin/user/${id}`);
     };
 
     const columns = [
