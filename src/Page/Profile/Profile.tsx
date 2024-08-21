@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
+import {useNavigate} from 'react-router-dom';
 import './Profile.scss';
 
 const Profile: React.FC = () => {
-    // Thông tin người dùng cố định
     const initialUserState = {
         fullName: "Huỳnh Thị Mai Phương",
         userName: "Phương",
@@ -15,6 +15,7 @@ const Profile: React.FC = () => {
     };
 
     const [user, setUser] = useState(initialUserState);
+    const navigate = useNavigate();
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
         const {name, value, type} = e.target;
@@ -44,13 +45,14 @@ const Profile: React.FC = () => {
         <div className="profile-container">
             <nav className="profile-navbar">
                 <ul>
-                    <li className="profile-nav-item">Cài đặt</li>
-                    <li className="profile-nav-item">Đơn hàng của tôi</li>
+                    <li className="profile-nav-item" onClick={() => navigate('/profile')}>Cài đặt</li>
+                    <li className="profile-nav-item" onClick={() => navigate('/userOrderManagement')}>Đơn hàng của tôi
+                    </li>
                 </ul>
             </nav>
-            <div className="all-order-container">
+            <div className="profile-content">
                 <div className="sc-epPVmt bvRKJa rdt_TableHeader">
-                    <div className="sc-fpSrms bRougq">Thông tin cá nhân</div>
+                    <div className="text-profile">Thông tin cá nhân</div>
                 </div>
                 <form className="form-container" onSubmit={handleUpdate}>
                     <div className="form-group">
@@ -144,9 +146,9 @@ const Profile: React.FC = () => {
                             <option value="Admin">Admin</option>
                         </select>
                     </div>
-                    <div className="form-actions">
-                        <button type="submit" className="btn btn-primary">Cập nhật</button>
-                        <button type="button" className="btn btn-secondary" onClick={handleCancel}>Hủy</button>
+                    <div className="form-action">
+                        <button type="submit" className="btn btn-capnhat">Cập nhật</button>
+                        <button type="button" className="btn btn-huy" onClick={handleCancel}>Hủy</button>
                     </div>
                 </form>
             </div>
