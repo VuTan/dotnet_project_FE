@@ -28,6 +28,7 @@ import ConfirmedOrdersUser from "../Component/UserDonHang/confirmedOrdersUser/Co
 import PackagingOrdersUser from "../Component/UserDonHang/packagingOrdersUser/PackagingOrdersUser";
 import CompletedOrdersUser from "../Component/UserDonHang/completedOrdersUser/CompletedOrdersUser";
 import CancelledOrdersUser from "../Component/UserDonHang/cancelledOrdersUser/CancelledOrdersUser";
+import UserDetailManager from "../Component/AdminNguoiDung/UserDetailManager/UserDetailManager";
 
 const publicRoutes = [
     {path: '/', component: Home},
@@ -42,6 +43,7 @@ const publicRoutes = [
         path: '/admin', component: AdminPage,
         children: [
             {path: 'adminUserManager', component: AdminUserManager},
+            {path: 'user/:userId', component: UserDetailManager},
         ]
     },
 
@@ -67,12 +69,12 @@ const publicRoutes = [
         path: '/userOrderManagement',
         component: UserOrderManagement,
         children: [
-            { path: 'allOrdersUser', component: AllOrdersUser },
-            { path: 'confirmedOrdersUser', component: ConfirmedOrdersUser },
-            { path: 'packagingOrdersUser', component: PackagingOrdersUser },
-            { path: 'shippingHandoversUser', component: ShippingHandoversUser },
-            { path: 'completedOrdersUser', component: CompletedOrdersUser },
-            { path: 'cancelledOrdersUser', component: CancelledOrdersUser },
+            {path: 'allOrdersUser', component: AllOrdersUser},
+            {path: 'confirmedOrdersUser', component: ConfirmedOrdersUser},
+            {path: 'packagingOrdersUser', component: PackagingOrdersUser},
+            {path: 'shippingHandoversUser', component: ShippingHandoversUser},
+            {path: 'completedOrdersUser', component: CompletedOrdersUser},
+            {path: 'cancelledOrdersUser', component: CancelledOrdersUser},
         ]
     },
 ];
