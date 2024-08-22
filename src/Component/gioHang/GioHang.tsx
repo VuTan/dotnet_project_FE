@@ -1,23 +1,23 @@
 import './gioHang.scss';
 import React from 'react';
-import {FaPhoneAlt} from "react-icons/fa";
-import {AiFillEnvironment, AiFillPhone} from "react-icons/ai";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faTrash,faPen,faChevronRight, faFile} from "@fortawesome/free-solid-svg-icons";
+
+
 
 const GioHang = () => {
     return (
         <div className="Container">
             <div className="head-container d-flex">
-                <h1>
-                    <span>
-                        <i className="fa-solid fa-file"></i>
-                    </span>
+                <h1 className={'bold-700'}>
+                    <FontAwesomeIcon icon={faFile} size="2x" style={{color:'rgb(250, 210, 7)', marginRight:'20px'}} />
                     <span style={{fontSize:'35px'}}>Xác Nhận đơn Hàng</span>
                 </h1>
             </div>
             <div className={'conten-container'}>
                 <div className={'giohang-left '} style={{width: '500px'}}>
                     <div className="head-left d-flex justify-content-between">
-                        <div style={{fontSize:'25px'}}>
+                        <div className={'bold-700'} style={{fontSize:'25px'}}>
                             Giao hàng
                             <div className="tch-check-box-tile"></div>
                         </div>
@@ -29,23 +29,23 @@ const GioHang = () => {
                         <img src="https://minio.thecoffeehouse.com/images/tch-web-order/Delivery2.png" width="50px"
                              height="50px" alt=""/>
                         <div className="diachi">
-                            <h4>Bien Hoa</h4>
+                            <h4 className={'bold-700'}>Bien Hoa</h4>
                             <p>Bien Hoa, Tp.Biên Hòa, Đồng Nai, Viet Nam</p>
                             <div className="tch-check-box-tile" style={{width: '400px', marginTop: '0px' ,marginBottom:'8px'}}></div>
                         </div>
                         <div className="d-flex chevron-right">
-                            <span><i className="fa-solid fa-chevron-right"></i></span>
+                            <FontAwesomeIcon icon={faChevronRight}/>
                         </div>
                     </div>
                     <div className="conten-left" style={{marginBottom:'16px'}}>
                         <img src="https://minio.thecoffeehouse.com/images/tch-web-order/Delivery2.png" width="50px"
                              height="50px" alt=""/>
                         <div className="diachi" style={{width: '400px'}}>
-                            <h4>Nhận hàng trong ngày Hôm nay</h4>
+                            <h4 className={'bold-700'}>Nhận hàng trong ngày Hôm nay</h4>
                             <p>Vào Lúc: Sớm nhất có thể</p>
                         </div>
                         <div className="d-flex chevron-right">
-                            <span><i className="fa-solid fa-chevron-right"></i></span>
+                            <FontAwesomeIcon icon={faChevronRight}/>
                         </div>
                     </div>
                     <div className="form-group">
@@ -63,7 +63,7 @@ const GioHang = () => {
                 </div>
                 <div className="giohang-right">
                     <div className="head-right d-flex justify-content-between">
-                        <div style={{fontSize:'25px'}}>
+                        <div className={'bold-700'} style={{fontSize:'25px'}}>
                             Các món đã chọn
                             <div className="tch-check-box-tile"></div>
                         </div>
@@ -73,16 +73,14 @@ const GioHang = () => {
                     </div>
                     <div className="donHang d-flex justify-content-between">
                         <div className="d-flex edit">
-                        <span>
-                            <i className="fa-solid fa-pen"></i>
-                        </span>
+                            <FontAwesomeIcon icon={faPen}/>
                         </div>
-                        <div>
-                            <h5>
+                        <div style={{position:'relative',right:'80px'}}>
+                            <h5 style={{fontSize:'16px'}}>
                                 1 x Bơ Sưa Phô Mai Tươi
                             </h5>
-                            <div className={'pdb-8px'}>
-                                <h5 style={{display: 'inline'}}>Size:</h5>
+                            <div className={'pdb-8px'} >
+                                <h5 style={{display: 'inline', fontSize:'16px'}}>Size:</h5>
                                 <span>Nhỏ</span>
                             </div>
                             <span>
@@ -135,7 +133,7 @@ const GioHang = () => {
             </div>
             <div className="pttt">
                 <div style={{paddingTop: '16px'}}>
-                    <h4>Phương Thức Thanh Toán</h4>
+                    <h4 className={'bold-700'} style={{fontSize:'30px'}}>Phương Thức Thanh Toán</h4>
                     <div className="tch-check-box-tile" ></div>
                 </div>
                 <ul className="ptth_gioHang">

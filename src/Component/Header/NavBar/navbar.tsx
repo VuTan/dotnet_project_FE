@@ -4,6 +4,7 @@ import images from '../../images/images';
 import {Link, useLocation, useNavigate} from 'react-router-dom';
 import config from "./config/config";
 import {FaUser} from "react-icons/fa";
+import {FaShoppingCart} from "react-icons/fa";
 import {useDispatch, useSelector} from 'react-redux';
 import {logout} from '../../../redux/user.reducer';
 import {RootState} from "../../../redux/store";
@@ -151,9 +152,12 @@ function NavBar() {
                             </button>
                         </Link>
                     </div>
-
-
                 )}
+            </div>
+            <div className={'gioHang'}>
+                <div className="ShoppingCart-icon" onClick={() => handleClick(config.routes.cart)}>
+                    <FaShoppingCart size={20} style={{color:'rgb(255, 165, 0)', marginLeft:'24px'}}/>
+                </div>
             </div>
         </div>
     );
