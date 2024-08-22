@@ -33,12 +33,10 @@ import AddUser from "../Component/AdminNguoiDung/AddUser/AddUser";
 import Profile from "../Page/Profile/Profile";
 import gioHang from "../Component/gioHang/GioHang";
 
-<<<<<<< HEAD
-=======
-import AdminSanPham from "../Component/AdminSanPham/AdminSanPham";
-import QLSanPham from "../Component/quanLySanPham/QLSanPham";
 
->>>>>>> 485cfb41eb629eca03d913ee3fcc952c2ef4861b
+import QLSanPham from "../Component/quanLySanPham/QLSanPham";
+import AdminSanPham from "../Component/AdminSanPham/AdminSanPham";
+
 
 const publicRoutes = [
     {path: '/', component: Home},
@@ -80,7 +78,7 @@ const publicRoutes = [
 
         ]
     },
-    
+
 
     // user don hang
     {

@@ -1,39 +1,29 @@
 import React from 'react';
 import {Box, Container, Grid} from '@mui/material';
-import productsData from '../../../../data/productsData';
 import ProductItem from '../../../../Component/ProductList/ProductItem/ProductItem';
-// import {Product} from "../../../../utils/type";
+import dataListP from '../../../../data/dataListP.json';
+import {Product} from "../../../../utils/type";
 
-interface Image {
-    url: string;
-    alt: string;
-}
-interface Product {
-    id: string;
-    name: string;
-    category: string;
-    categogyID: number;
-    descript: string;
-    title: string;
-    subcategories: string;
-    price: number;
-    images: Image[];
-}
+// Convert dataListP to Product[]
+const allProducts: Product[] = dataListP.flatMap((subCategory) =>
+    subCategory.products.map((product) => ({
+        id: product.id,
+        name: product.name,
+        price: product.price,
+        imgMain: product.imgMain,
+        subcategories: subCategory.nameSubCate,
+        category: "",
+        description: "",
+        imgs: [],
+        sizes: [],
+        toppings: [],
+    }))
+);
+
+// Select the first four products
+const selectedProducts = allProducts.slice(0, 4);
 
 const Content2: React.FC = () => {
-    // Group products by categogyID
-    const groupedProducts: Record<number, Product[]> = productsData.reduce((acc: Record<number, Product[]>, product) => {
-        const {categogyID} = product;
-        if (!acc[categogyID]) {
-            acc[categogyID] = [];
-        }
-        acc[categogyID].push(product);
-        return acc;
-    }, {});
-
-    // Get the first product from each group
-    const selectedProducts = Object.values(groupedProducts).map(products => products[0]);
-
     return (
         <Box>
             <Container>

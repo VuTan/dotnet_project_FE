@@ -5,10 +5,27 @@ import img from "../../../../Component/images/images";
 import '../content.scss'
 import {Link} from "react-router-dom";
 import ProductItem from '../../../../Component/ProductList/ProductItem/ProductItem';
-import productsData from "../../../../data/productsData";
+import dataListP from "../../../../data/dataListP.json"; // Import dataListP or appropriate data source
+
+const allProducts = dataListP.flatMap((subCategory) =>
+    subCategory.products.map((product) => ({
+        id: product.id,
+        name: product.name,
+        price: product.price,
+        imgMain: product.imgMain,
+        subcategories: subCategory.nameSubCate,
+        category: "",
+        description: "",
+        imgs: [],
+        sizes: [],
+        toppings: [],
+    }))
+);
+
+const product1 = allProducts.find(product => product.id === "70");
+const product2 = allProducts.find(product => product.id === "59");
 
 function Content1() {
-    const getTwoProducts = productsData.slice(0, 2);
     return (
         <Box>
             <Container>
@@ -16,14 +33,17 @@ function Content1() {
                     <Grid item xs={6} className={'left'}>
                         <Paper elevation={3}>
                             <Link to="/login"> {/* sửa lại link bao h có menu */}
-                                <img src={img.ttc} alt={`content1`} className="images"/>
+                                <img src={img.ttc} alt="content1" className="images"/>
                             </Link>
                         </Paper>
                     </Grid>
                     <Grid item xs={6} className={'right'}>
-                        {getTwoProducts.map(product => (
-                            <ProductItem key={product.id} productid={product.id}/>
-                        ))}
+                        {product1 && (
+                            <ProductItem productid={product1.id}/>
+                        )}
+                        {product2 && (
+                            <ProductItem productid={product2.id}/>
+                        )}
                     </Grid>
                 </Grid>
             </Container>
