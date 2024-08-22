@@ -32,6 +32,7 @@ import UserDetailManager from "../Component/AdminNguoiDung/UserDetailManager/Use
 import AddUser from "../Component/AdminNguoiDung/AddUser/AddUser";
 import Profile from "../Page/Profile/Profile";
 import gioHang from "../Component/gioHang/GioHang";
+import QLSanPham from "../Component/quanLySanPham/QLSanPham";
 
 const publicRoutes = [
     {path: '/', component: Home},
@@ -44,13 +45,15 @@ const publicRoutes = [
     {path: '/profile', component: Profile},
     {path: '/cart', component: gioHang},
     {path: '/menu', component: ListPage},
+    // {path: 'qlSanPham', component: QLSanPham},
     //admin quản lý người dùng
     {
         path: '/admin', component: AdminPage,
         children: [
             {path: 'adminUserManager', component: AdminUserManager},
             {path: 'user/:userId', component: UserDetailManager},
-            {path: 'addUser', component: AddUser}
+            {path: 'addUser', component: AddUser},
+
         ]
     },
 
