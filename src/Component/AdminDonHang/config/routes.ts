@@ -1,6 +1,5 @@
 const routes = {
-    adminOrderManagement: '/adminOrderManagement'
-
+    adminOrderManagement: '/adminOrderManagement',
 
 };
 

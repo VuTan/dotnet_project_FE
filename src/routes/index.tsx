@@ -33,6 +33,7 @@ import AddUser from "../Component/AdminNguoiDung/AddUser/AddUser";
 import Profile from "../Page/Profile/Profile";
 import gioHang from "../Component/gioHang/GioHang";
 
+
 const publicRoutes = [
     {path: '/', component: Home},
     {path: '/store', component: Store},
@@ -70,6 +71,7 @@ const publicRoutes = [
 
         ]
     },
+    
 
     // user don hang
     {
@@ -84,6 +86,7 @@ const publicRoutes = [
             {path: 'cancelledOrdersUser', component: CancelledOrdersUser},
         ]
     },
+
 ];
 
 

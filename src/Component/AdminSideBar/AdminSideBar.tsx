@@ -28,16 +28,7 @@ const AdminSideBar: React.FC<AdminSideBarProps> = ({roles, currentAdminMenu}) =>
         <div id="ad_sidebar" className="ad_sidebar">
             <ul className="sidebar-nav" id="sidebar-nav">
                 <h3>Admin</h3>
-
-                {/* Dashboard */}
-                {roles.includes("dashboard") && (
-                    <li className={`nav-item ${currentAdminMenu === "dashboard" ? "" : "collapsed"}`}>
-                        <a className="nav-link" href="#">
-                            <span className={`text_sidebar ${selectedType === 'thong_ke' ? 'selected' : ''}`}
-                                  onClick={() => handleToggle('thong_ke')}>Thống kê</span>
-                        </a>
-                    </li>
-                )}
+                
 
                 {/* Customer Management */}
                 {roles.includes("user") && (
@@ -73,15 +64,6 @@ const AdminSideBar: React.FC<AdminSideBarProps> = ({roles, currentAdminMenu}) =>
                     </li>
                 )}
 
-                {/* Logs */}
-                {roles.includes("log") && (
-                    <li className={`nav-item ${currentAdminMenu === "log" ? "" : "collapsed"}`}>
-                        <a className="nav-link" href="#">
-                             <span className={`text_sidebar ${selectedType === 'qli_log' ? 'selected' : ''}`}
-                                   onClick={() => handleToggle('qli_log')}>Quản lý Log</span>
-                        </a>
-                    </li>
-                )}
             </ul>
         </div>
     );

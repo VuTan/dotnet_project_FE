@@ -17,19 +17,32 @@ const UserOrderManagement: React.FC = () => {
     }, [location, navigate]);
 
     return (
-        <div className="user-OrderPage">
-            {/* Sidebar */}
-            <div className="UserOrder_sidebar">
-<UserOrderSideBar/>
+        <div className="uo-container">
+            <div className="nav">
+                <nav className="profile-navbar">
+                    <ul>
+                        <li className="profile-nav-item" onClick={() => navigate('/profile')}>Cài đặt</li>
+                        <li className="profile-nav-item" onClick={() => navigate('/userOrderManagement')}>Đơn hàng của
+                            tôi
+                        </li>
+                    </ul>
+                </nav>
             </div>
 
-
-            {/* Nội dung chính của trang */}
-            <div className="mainOrder-content">
-                <Outlet/>
-            </div>
+    <div className="user-OrderPage">
+        {/* Sidebar */}
+        <div className="UserOrder_sidebar">
+            <UserOrderSideBar/>
         </div>
-    );
+
+        {/* Nội dung chính của trang */}
+        <div className="mainOrder-content">
+            <Outlet/>
+        </div>
+    </div>
+        </div>
+)
+    ;
 };
 
 export default UserOrderManagement;
