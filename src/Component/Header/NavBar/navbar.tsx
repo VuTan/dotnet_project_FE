@@ -4,6 +4,8 @@ import images from '../../images/images';
 import {Link, useLocation, useNavigate} from 'react-router-dom';
 import config from "./config/config";
 import {FaUser} from "react-icons/fa";
+import {FaSearch} from "react-icons/fa";
+import {FaShoppingCart} from "react-icons/fa";
 import {useDispatch, useSelector} from 'react-redux';
 import {logout} from '../../../redux/user.reducer';
 import {RootState} from "../../../redux/store";
@@ -12,6 +14,7 @@ import {MdOutlineArrowDropDown} from "react-icons/md";
 import CategoryList from "../../ProductList/SideBar/ProductsTypes/CtegoryList/CategoryList";
 import {TypeOption} from '../../ProductList/SideBar/ProductsTypes/InterfacePTypes';
 import dataCategoryListP from '../../../data/dataCategoryListP.json';
+import {SearchOutlined} from "@mui/icons-material";
 function NavBar() {
     const [isSticky, setIsSticky] = useState(false);
     const [showDropdown, setShowDropdown] = useState(false);
@@ -40,6 +43,11 @@ function NavBar() {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
+    const [searchTerm, setSearchTerm] = useState('');
+
+    const handleChange = () => {
+        setSearchTerm(config.routes.value);
+    };
 
     const handleClick = (path: string) => {
         if (path === config.routes.logout) {
@@ -113,10 +121,7 @@ function NavBar() {
                         )}
                     </div>
                 </div>
-                <Link title="Chuyện nhà" to={config.routes.homeStory}
-                      onClick={() => handleClick(config.routes.homeStory)}>
-                    Chuyện nhà
-                </Link>
+
                 <Link title="Cảm hứng CloudFee" to={config.routes.inspiration}
                       onClick={() => handleClick(config.routes.inspiration)}>
                     Cảm hứng CloudFee
@@ -124,6 +129,10 @@ function NavBar() {
                 <Link title="Cửa hàng" to={config.routes.store} onClick={() => handleClick(config.routes.store)}>
                     Cửa hàng
                 </Link>
+
+                <div>
+                    <input className={'search'} type="text" placeholder="Tìm kiếm Sản Phẩm" value={searchTerm} onChange={handleChange}/>
+                </div>
             </div>
             <div className="login">
                 <div className="user-icon" onClick={toggleDropdown}>
@@ -151,9 +160,12 @@ function NavBar() {
                             </button>
                         </Link>
                     </div>
-
-
                 )}
+            </div>
+            <div className={'gioHang'}>
+                <div className="ShoppingCart-icon" onClick={() => handleClick(config.routes.cart)}>
+                    <FaShoppingCart size={20} style={{color:'rgb(255, 165, 0)', marginLeft:'24px'}}/>
+                </div>
             </div>
         </div>
     );

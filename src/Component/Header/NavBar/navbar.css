@@ -28,6 +28,10 @@
   margin: 0 20px;
 }
 
+.search {
+  width: 320px;
+}
+
 .menu-wrapper a {
   text-decoration: none;
   color: black;
@@ -41,7 +45,7 @@
 
 .login {
   flex-shrink: 0;
-  margin-left: 5%;
+  margin-left: 1%;
   cursor: pointer;
   position: relative;
 }

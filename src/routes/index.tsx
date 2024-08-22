@@ -33,6 +33,12 @@ import AddUser from "../Component/AdminNguoiDung/AddUser/AddUser";
 import Profile from "../Page/Profile/Profile";
 import gioHang from "../Component/gioHang/GioHang";
 
+<<<<<<< HEAD
+=======
+import AdminSanPham from "../Component/AdminSanPham/AdminSanPham";
+import QLSanPham from "../Component/quanLySanPham/QLSanPham";
+
+>>>>>>> 485cfb41eb629eca03d913ee3fcc952c2ef4861b
 
 const publicRoutes = [
     {path: '/', component: Home},
@@ -45,13 +51,16 @@ const publicRoutes = [
     {path: '/profile', component: Profile},
     {path: '/cart', component: gioHang},
     {path: '/menu', component: ListPage},
+    // {path: 'qlSanPham', component: QLSanPham},
     //admin quản lý người dùng
     {
         path: '/admin', component: AdminPage,
         children: [
             {path: 'adminUserManager', component: AdminUserManager},
+            {path: 'adminProductManager', component: AdminSanPham},
             {path: 'user/:userId', component: UserDetailManager},
-            {path: 'addUser', component: AddUser}
+            {path: 'addUser', component: AddUser},
+
         ]
     },
 
