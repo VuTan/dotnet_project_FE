@@ -32,6 +32,7 @@ import UserDetailManager from "../Component/AdminNguoiDung/UserDetailManager/Use
 import AddUser from "../Component/AdminNguoiDung/AddUser/AddUser";
 import Profile from "../Page/Profile/Profile";
 import gioHang from "../Component/gioHang/GioHang";
+import AdminSanPham from "../Component/AdminSanPham/AdminSanPham";
 
 const publicRoutes = [
     {path: '/', component: Home},
@@ -49,6 +50,7 @@ const publicRoutes = [
         path: '/admin', component: AdminPage,
         children: [
             {path: 'adminUserManager', component: AdminUserManager},
+            {path: 'adminProductManager', component: AdminSanPham},
             {path: 'user/:userId', component: UserDetailManager},
             {path: 'addUser', component: AddUser}
         ]
