@@ -1,3 +1,44 @@
+.uo-container {
+  display: flex;
+flex-direction: row;
+  .nav {
+width: 20%;
+  .profile-navbar {
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    height: 100vh;
+    box-sizing: border-box;
+
+  }
+
+  .profile-navbar ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 40%;
+    width: 80%;
+    margin-left: 10%;
+
+
+  }
+
+  .profile-nav-item {
+    margin-bottom: 15px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    background-color: #E57905;
+    color: white;
+  }
+
+  .profile-nav-item:hover {
+    background-color: #a95904;
+    color: #fff;
+  }
+  }
 .user-OrderPage {
   font-family: 'SF Pro Text', sans-serif;
   display: grid;
@@ -8,4 +49,5 @@
   }
   .mainOrder-content {
   }
+}
 }
