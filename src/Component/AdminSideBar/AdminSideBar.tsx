@@ -53,15 +53,24 @@ const AdminSideBar: React.FC<AdminSideBarProps> = ({roles, currentAdminMenu}) =>
 
 
                 {/* Product Management */}
+                {/*{roles.includes("product") && (*/}
+                {/*    <li className={`nav-item ${currentAdminMenu === "product" ? "" : "collapsed"}`}>*/}
+                {/*        <a className="nav-link" href="#">*/}
+                {/*             <span className={`text_sidebar ${selectedType === 'qli_sp' ? 'selected' : ''}`}*/}
+                {/*                   onClick={() => handleToggle('qli_sp')}>Quản lý sản phẩm</span>*/}
+                {/*        </a>*/}
+                {/*    </li>*/}
+                {/*)}*/}
                 {roles.includes("product") && (
                     <li className={`nav-item ${currentAdminMenu === "product" ? "" : "collapsed"}`}>
-                        <a className="nav-link" href="#">
-                             <span className={`text_sidebar ${selectedType === 'qli_sp' ? 'selected' : ''}`}
-                                   onClick={() => handleToggle('qli_sp')}>Quản lý sản phẩm</span>
-                        </a>
+                        <Link to="adminProductManager" className="nav-link">
+
+                            <span className={`text_sidebar ${selectedType === 'qli_sp' ? 'selected' : ''}`}
+                                  onClick={() => handleToggle('qli_sp')}>Quản lý sản phẩm</span>
+                        </Link>
+
                     </li>
                 )}
-
                 {/* Order Management */}
                 {roles.includes("order") && (
                     <li className={`nav-item ${currentAdminMenu === "order" ? "" : "collapsed"}`}>
