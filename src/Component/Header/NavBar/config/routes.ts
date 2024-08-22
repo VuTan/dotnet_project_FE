@@ -9,6 +9,7 @@ const routes = {
     logout: '/logout',
     profile: '/profile',
     cart: '/cart',
+    value: '/value'
 };
 
 export default routes;

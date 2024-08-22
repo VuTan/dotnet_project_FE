@@ -26,10 +26,11 @@
   align-items: center;
   flex-grow: 1;
   margin: 0 20px;
-
-
 }
 
+.search{
+  width: 320px;
+}
 
 .menu-wrapper a {
   text-decoration: none;
@@ -45,7 +46,7 @@
 
 .login {
   flex-shrink: 0;
-  margin-left: 5%;
+  margin-left: 1%;
   cursor: pointer;
   position: relative;
 
