@@ -3,24 +3,40 @@ import './ProductItemStyles.scss';
 import { formatPercentage, formatPrices } from "../../../utils";
 import { Button } from "@mui/material";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
-import productsData from "../../../data/productsData";
+// import productsData from "../../../data/productsData";
 import { Link } from 'react-router-dom';
 import { PATH } from "../../../utils/path";
 import { useNavigate } from "react-router-dom";
-
-interface Product {
-    id: string;
-    title: string;
-    price: number;
-    images: { url: string; alt: string }[];
-}
+import dataListP from '../../../data/dataListP.json';
+import { Product } from "../../../utils/type";
 
 interface ProductItemProps {
     productid: string;
 }
 
+// Chuyển đổi dataListP thành Product[]
+const allProducts: Product[] = dataListP.flatMap((subCategory) =>
+    subCategory.products.map((product) => ({
+        id: product.id,
+        name: product.name,
+        price: product.price,
+        imgMain: product.imgMain,
+        subcategories: subCategory.nameSubCate,
+        category: "",
+        description: "",
+        imgs: [],
+        sizes: [],
+        toppings: [],
+    }))
+);
+
+// Tìm sản phẩm dựa trên productid
+const getProductById = (id: string): Product | undefined => {
+    return allProducts.find(product => product.id === id);
+};
+
 const ProductItem: React.FC<ProductItemProps> = ({ productid }) => {
-    const product: Product | undefined = productsData.find(item => item.id === productid);
+    const product = getProductById(productid);
     const navigate = useNavigate();
 
     const handleProductClick = () => {
@@ -30,7 +46,7 @@ const ProductItem: React.FC<ProductItemProps> = ({ productid }) => {
     };
 
     if (!product) {
-        return null; // or some fallback UI
+        return <div></div>;
     }
 
     return (
@@ -38,12 +54,12 @@ const ProductItem: React.FC<ProductItemProps> = ({ productid }) => {
     <Link to={`/products/${product.id}`} className="link">
     <div className="card_top">
     <div className="wrapImgs">
-    <img className="img_other" src={product.images[0].url} alt={product.images[0].alt} />
+    <img className="img_other" src={product.imgMain} />
     </div>
     </div>
     <div className="card_bottom">
     <h3 className="titleProduct">
-        <span>{product.title}</span>
+        <span>{product.name}</span>
         </h3>
         <div className="bottom_wrap">
     <div className="price_container">
