@@ -32,8 +32,9 @@ import UserDetailManager from "../Component/AdminNguoiDung/UserDetailManager/Use
 import AddUser from "../Component/AdminNguoiDung/AddUser/AddUser";
 import Profile from "../Page/Profile/Profile";
 import gioHang from "../Component/gioHang/GioHang";
-import AdminSanPham from "../Component/AdminSanPham/AdminSanPham";
+
 import QLSanPham from "../Component/quanLySanPham/QLSanPham";
+import AdminSanPham from "../Component/AdminSanPham/AdminSanPham";
 
 
 const publicRoutes = [
@@ -76,7 +77,7 @@ const publicRoutes = [
 
         ]
     },
-    
+
 
     // user don hang
     {
