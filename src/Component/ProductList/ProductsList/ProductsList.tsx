@@ -1,12 +1,7 @@
 import React from 'react';
 import './ProductsList.scss';
 import ProductItem from "../../../Component/ProductList/ProductItem/ProductItem";
-
-interface Product {
-    id: string;
-    subcategories: string;
-}
-
+import { Product } from "../../../utils/type";
 interface ProductsListProps {
     productData: Product[];
 }
